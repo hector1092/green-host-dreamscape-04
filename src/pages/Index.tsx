@@ -1,5 +1,5 @@
 import React from 'react';
-import CircuitBackground from '../components/CircuitBackground';
+import DynamicBackground from '../components/DynamicBackground';
 import Header from '../components/Header';
 import HostingPlans from '../components/HostingPlans';
 import Stats from '../components/Stats';
@@ -9,7 +9,7 @@ import Footer from '../components/Footer';
 const Index = () => {
   return (
     <div className="min-h-screen relative" dir="rtl">
-      <CircuitBackground />
+      <DynamicBackground />
       <Header />
       <Features />
       <HostingPlans />
