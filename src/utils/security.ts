@@ -47,10 +47,18 @@ export const generateOTP = (): string => {
 };
 
 export const sendOTP = async (otp: string): Promise<void> => {
-  // في بيئة الإنتاج، يجب استخدام خدمة SMS حقيقية
-  console.log(`Sending OTP ${otp} to +201030435987`);
+  // تحسين رسالة WhatsApp
+  const message = encodeURIComponent(`رمز التحقق الخاص بك في Green Host هو: ${otp}`);
+  const whatsappUrl = `https://wa.me/201030435987?text=${message}`;
   
-  // محاكاة إرسال الرسالة
-  const whatsappUrl = `https://wa.me/201030435987?text=رمز التحقق الخاص بك هو: ${otp}`;
-  window.open(whatsappUrl, '_blank');
+  // فتح WhatsApp في نافذة جديدة
+  const newWindow = window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+  
+  // التأكد من فتح النافذة بنجاح
+  if (newWindow) {
+    newWindow.focus();
+  } else {
+    // إذا تم منع النوافذ المنبثقة، نفتح في نفس النافذة
+    window.location.href = whatsappUrl;
+  }
 };
