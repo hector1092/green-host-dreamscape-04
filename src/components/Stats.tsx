@@ -35,13 +35,12 @@ const Stats = () => {
           {stats.map((stat, index) => (
             <div 
               key={index} 
-              className="card text-center transition-all duration-500"
-              style={{ animationDelay: `${index * 0.2}s` }}
+              className="card text-center"
             >
               <stat.icon className="w-16 h-16 text-primary mx-auto mb-6" />
-              <div className="text-5xl font-bold text-primary mb-4 text-glow">
+              <div className="text-5xl font-bold text-primary mb-4">
                 {isVisible ? (
-                  <span className="animate-number-count">
+                  <span>
                     {stat.value}
                     {stat.suffix}
                   </span>
