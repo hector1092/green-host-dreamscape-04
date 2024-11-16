@@ -73,7 +73,7 @@ const HostingPlans = () => {
           {plans.map((plan, index) => (
             <div 
               key={index} 
-              className={`card ${plan.popular ? 'ring-2 ring-primary' : ''}`}
+              className={`card bg-gradient-to-br from-gray-900 to-gray-800 ${plan.popular ? 'ring-2 ring-primary' : ''}`}
             >
               {plan.popular && (
                 <span className="absolute -top-3 right-4 bg-primary text-white px-4 py-1 rounded-full text-sm">
@@ -82,8 +82,8 @@ const HostingPlans = () => {
               )}
               <div className="text-center">
                 <h3 className="text-2xl font-bold text-primary mb-2">{plan.name}</h3>
-                <p className="text-gray-300 text-sm mb-6">{plan.description}</p>
-                <div className="text-4xl font-bold text-white mb-8">
+                <p className="text-gray-400 text-sm mb-6">{plan.description}</p>
+                <div className="text-4xl font-bold text-white mb-8 bg-gradient-to-r from-primary via-blue-500 to-primary bg-clip-text">
                   {plan.price}
                   <span className="text-xl text-gray-400"> ج.م/شهرياً</span>
                 </div>
@@ -91,7 +91,7 @@ const HostingPlans = () => {
                   {plan.features.map((feature, fIndex) => (
                     <li key={fIndex} className="flex items-center gap-3">
                       <feature.icon className="w-5 h-5 text-primary shrink-0" />
-                      <span className="text-gray-200 text-sm">{feature.text}</span>
+                      <span className="text-gray-300 text-sm">{feature.text}</span>
                     </li>
                   ))}
                 </ul>
