@@ -35,7 +35,7 @@ const Stats = () => {
           {stats.map((stat, index) => (
             <div 
               key={index} 
-              className="card text-center transform hover:scale-105 transition-all duration-500"
+              className="card text-center transition-all duration-500"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
               <stat.icon className="w-16 h-16 text-primary mx-auto mb-6" />
