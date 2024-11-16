@@ -1,6 +1,5 @@
 import React from 'react';
 import { Globe } from 'lucide-react';
-import { Link } from 'react-router-dom';
 import AboutUsDialog from './AboutUsDialog';
 
 const Header = () => {
@@ -12,15 +11,6 @@ const Header = () => {
       </div>
       
       <div className="fixed top-0 right-0 p-4 flex gap-4 z-50 bg-secondary/80 backdrop-blur-sm">
-        <Link 
-          to="/login" 
-          className="relative overflow-hidden group px-8 py-3 text-lg font-bold rounded-xl bg-gradient-to-r from-primary via-blue-500 to-primary bg-[length:200%_100%] hover:bg-[100%_0] transition-all duration-500"
-        >
-          <span className="relative z-10 text-white group-hover:text-white transition-colors">
-            لوحة التحكم
-          </span>
-          <div className="absolute inset-0 bg-gradient-to-r from-primary-dark via-blue-600 to-primary-dark opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-        </Link>
         <AboutUsDialog />
       </div>
       
