@@ -1,5 +1,6 @@
 import React from 'react';
 import { HardDrive, Network, Mail, Globe, Database, Shield, Clock } from 'lucide-react';
+import { Button } from "@/components/ui/button";
 
 const plans = [
   {
@@ -96,16 +97,13 @@ const HostingPlans = () => {
                     </li>
                   ))}
                 </ul>
-                <button 
+                <Button 
                   onClick={handleSubscribe}
-                  className={`w-full py-3 px-6 rounded-lg font-bold transition-all duration-300 
-                    ${plan.popular 
-                      ? 'bg-gradient-to-r from-primary to-primary-dark text-white hover:shadow-lg hover:shadow-primary/30 hover:-translate-y-1'
-                      : 'bg-gradient-to-r from-secondary-foreground/10 to-secondary-foreground/20 text-white hover:shadow-lg hover:shadow-white/10 hover:-translate-y-1'
-                    } transform hover:scale-105 active:scale-95`}
+                  className="w-full bg-primary hover:bg-primary/90 text-white font-bold"
+                  size="lg"
                 >
                   اشترك الآن
-                </button>
+                </Button>
               </div>
             </div>
           ))}
