@@ -1,14 +1,36 @@
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { BarChart, Users, Clock, ArrowUp, Server } from "lucide-react";
+import { BarChart, Users, Clock, ArrowUp, Server, RefreshCcw } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { useToast } from "@/components/ui/use-toast";
 
 const StatsPanel = () => {
+  const { toast } = useToast();
+
+  const handleRefresh = () => {
+    toast({
+      title: "تم تحديث الإحصائيات",
+      description: "تم تحديث البيانات بنجاح",
+    });
+  };
+
   return (
     <Card className="animate-fade-in">
       <CardHeader>
-        <CardTitle className="flex items-center gap-2">
-          <BarChart className="w-5 h-5" />
-          الإحصائيات
+        <CardTitle className="flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <BarChart className="w-5 h-5" />
+            الإحصائيات
+          </div>
+          <Button 
+            variant="outline" 
+            size="sm"
+            onClick={handleRefresh}
+            className="hover:bg-primary hover:text-white transition-colors"
+          >
+            <RefreshCcw className="w-4 h-4 ml-2" />
+            تحديث
+          </Button>
         </CardTitle>
       </CardHeader>
       <CardContent>

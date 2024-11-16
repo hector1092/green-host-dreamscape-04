@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Shield, AlertTriangle, CheckCircle, Lock } from "lucide-react";
+import { Shield, AlertTriangle, CheckCircle, Lock, RefreshCcw } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/components/ui/use-toast";
 
@@ -14,6 +14,13 @@ const SecurityPanel = () => {
     });
   };
 
+  const handleSecurityScan = () => {
+    toast({
+      title: "جاري فحص الأمان",
+      description: "سيتم إخطارك عند اكتمال الفحص",
+    });
+  };
+
   return (
     <Card className="animate-fade-in">
       <CardHeader>
@@ -22,14 +29,25 @@ const SecurityPanel = () => {
             <Shield className="w-5 h-5" />
             الحالة الأمنية
           </div>
-          <Button 
-            variant="outline" 
-            size="sm"
-            onClick={handleSecurityFix}
-            className="hover:bg-primary hover:text-white transition-colors"
-          >
-            إصلاح المشكلات
-          </Button>
+          <div className="flex gap-2">
+            <Button 
+              variant="outline" 
+              size="sm"
+              onClick={handleSecurityScan}
+              className="hover:bg-primary hover:text-white transition-colors"
+            >
+              <RefreshCcw className="w-4 h-4 ml-2" />
+              فحص الأمان
+            </Button>
+            <Button 
+              variant="outline" 
+              size="sm"
+              onClick={handleSecurityFix}
+              className="hover:bg-primary hover:text-white transition-colors"
+            >
+              إصلاح المشكلات
+            </Button>
+          </div>
         </CardTitle>
       </CardHeader>
       <CardContent>
