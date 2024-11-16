@@ -23,14 +23,14 @@ const PaymentMethods = () => {
       action: () => setShowCardForm(true)
     },
     {
-      icon: "/icons/image-_3_.ico",
+      icon: "/icons/image-_2_.ico",
       name: "إنستا باي",
       description: "الدفع السريع عبر إنستا باي",
       bgColor: "bg-purple-500/10",
       action: () => setShowPhoneDialog(true)
     },
     {
-      icon: "/icons/image-_2_.ico",
+      icon: "/icons/image-_3_.ico",
       name: "تحويل بنكي",
       description: "حول المبلغ مباشرة إلى حسابنا البنكي",
       bgColor: "bg-green-500/10"
