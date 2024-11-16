@@ -41,27 +41,17 @@
   }
 
   .heading {
-    @apply text-5xl md:text-6xl font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent bg-[length:200%_auto] animate-text-flow;
+    @apply text-5xl md:text-6xl font-bold text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)] animate-text-flow;
   }
 
   .subheading {
-    @apply text-xl text-gray-400;
+    @apply text-xl text-gray-200 drop-shadow-[0_1px_2px_rgba(0,0,0,0.2)];
   }
 }
 
-.circuit-background {
-  background-image: radial-gradient(#10B981 1px, transparent 1px);
-  background-size: 50px 50px;
-  animation: moveBackground 15s linear infinite;
-}
-
-@keyframes moveBackground {
-  0% {
-    background-position: 0 0;
-  }
-  100% {
-    background-position: 50px 50px;
-  }
+.text-glow {
+  text-shadow: 0 0 20px rgba(16, 185, 129, 0.5);
+  animation: glow 2s ease-in-out infinite;
 }
 
 @keyframes glow {
@@ -71,8 +61,4 @@
   50% {
     text-shadow: 0 0 30px rgba(16, 185, 129, 0.8);
   }
-}
-
-.text-glow {
-  animation: glow 2s ease-in-out infinite;
 }
