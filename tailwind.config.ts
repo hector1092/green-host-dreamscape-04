@@ -50,6 +50,10 @@ export default {
           "0%": { transform: "translateY(100%)" },
           "100%": { transform: "translateY(0)" },
         },
+        "text-flow": {
+          "0%": { backgroundPosition: "0% 50%" },
+          "100%": { backgroundPosition: "200% 50%" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -57,6 +61,7 @@ export default {
         "fade-in": "fade-in 0.6s ease-out",
         "slide-left": "slide-left 20s linear infinite",
         "number-count": "number-count 1s ease-out forwards",
+        "text-flow": "text-flow 3s linear infinite",
       },
     },
   },
