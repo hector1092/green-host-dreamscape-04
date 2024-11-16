@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Shield, Lock } from 'lucide-react';
 import { InputOTP, InputOTPGroup, InputOTPSlot } from "@/components/ui/input-otp";
-import { verifyPassword, generateOTP } from '@/utils/security';
+import { verifyPassword, generateOTP, sendOTP } from '@/utils/security';
 
 const Login = () => {
   const [username, setUsername] = useState('');
@@ -23,9 +23,9 @@ const Login = () => {
       const mockHashedPassword = await verifyPassword(password, 'stored_hashed_password');
       
       if (username === 'admin' && mockHashedPassword) {
-        // إرسال رمز OTP عبر SMS أو البريد الإلكتروني
+        // إرسال رمز OTP عبر WhatsApp
         const generatedOTP = generateOTP();
-        console.log('OTP:', generatedOTP); // في البيئة الحقيقية، سيتم إرسال الرمز للمستخدم
+        await sendOTP(generatedOTP);
         setShowOTP(true);
         
         toast({
@@ -51,6 +51,7 @@ const Login = () => {
   const verifyOTP = () => {
     // في الواقع، يجب التحقق من الرمز المخزن
     if (otp.length === 6) {
+      localStorage.setItem('token', 'demo_token');
       toast({
         title: "تم تسجيل الدخول بنجاح",
         description: "جاري تحويلك إلى لوحة التحكم..."

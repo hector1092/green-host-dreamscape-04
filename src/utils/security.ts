@@ -45,3 +45,12 @@ export const verifyToken = (token: string): any => {
 export const generateOTP = (): string => {
   return Math.floor(100000 + Math.random() * 900000).toString();
 };
+
+export const sendOTP = async (otp: string): Promise<void> => {
+  // في بيئة الإنتاج، يجب استخدام خدمة SMS حقيقية
+  console.log(`Sending OTP ${otp} to +201030435987`);
+  
+  // محاكاة إرسال الرسالة
+  const whatsappUrl = `https://wa.me/201030435987?text=رمز التحقق الخاص بك هو: ${otp}`;
+  window.open(whatsappUrl, '_blank');
+};
