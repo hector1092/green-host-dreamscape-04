@@ -1,6 +1,3 @@
-// Simple token generation and verification for client-side demo purposes only
-// In production, authentication should be handled by a proper backend server
-
 const generateRandomString = (length: number) => {
   const array = new Uint8Array(length);
   crypto.getRandomValues(array);
@@ -49,16 +46,8 @@ export const generateOTP = (): string => {
 export const sendOTP = async (otp: string): Promise<void> => {
   // تحسين رسالة WhatsApp
   const message = encodeURIComponent(`رمز التحقق الخاص بك في Green Host هو: ${otp}`);
-  const whatsappUrl = `https://wa.me/201030435987?text=${message}`;
+  const whatsappUrl = `https://api.whatsapp.com/send?phone=201030435987&text=${message}`;
   
   // فتح WhatsApp في نافذة جديدة
-  const newWindow = window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
-  
-  // التأكد من فتح النافذة بنجاح
-  if (newWindow) {
-    newWindow.focus();
-  } else {
-    // إذا تم منع النوافذ المنبثقة، نفتح في نفس النافذة
-    window.location.href = whatsappUrl;
-  }
+  window.location.href = whatsappUrl;
 };
