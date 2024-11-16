@@ -59,6 +59,10 @@ const plans = [
 ];
 
 const HostingPlans = () => {
+  const handleSubscribe = () => {
+    window.open('https://wa.me/201030435987', '_blank');
+  };
+
   return (
     <section id="hosting-plans" className="py-20">
       <div className="container mx-auto px-4">
@@ -92,12 +96,15 @@ const HostingPlans = () => {
                     </li>
                   ))}
                 </ul>
-                <button className={`w-full py-3 px-6 rounded-lg font-bold transition-all duration-300 ${
-                  plan.popular 
-                    ? 'bg-primary text-white hover:bg-primary/90'
-                    : 'bg-secondary-foreground/10 text-white hover:bg-secondary-foreground/20'
-                }`}>
-                  اختر الخطة
+                <button 
+                  onClick={handleSubscribe}
+                  className={`w-full py-3 px-6 rounded-lg font-bold transition-all duration-300 
+                    ${plan.popular 
+                      ? 'bg-gradient-to-r from-primary to-primary-dark text-white hover:shadow-lg hover:shadow-primary/30 hover:-translate-y-1'
+                      : 'bg-gradient-to-r from-secondary-foreground/10 to-secondary-foreground/20 text-white hover:shadow-lg hover:shadow-white/10 hover:-translate-y-1'
+                    } transform hover:scale-105 active:scale-95`}
+                >
+                  اشترك الآن
                 </button>
               </div>
             </div>
