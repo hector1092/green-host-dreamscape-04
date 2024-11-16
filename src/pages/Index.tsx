@@ -9,7 +9,7 @@ import PaymentMethods from '../components/PaymentMethods';
 
 const Index = () => {
   return (
-    <div className="min-h-screen relative bg-secondary/95" dir="rtl">
+    <div className="min-h-screen relative" dir="rtl">
       <CircuitBackground />
       <WelcomeMessage />
       <Header />
