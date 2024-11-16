@@ -7,6 +7,8 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import useEmblaCarousel from 'embla-carousel-react';
+import Autoplay from 'embla-carousel-autoplay';
 
 const services = [
   {
@@ -27,6 +29,11 @@ const services = [
 ];
 
 const Services = () => {
+  const autoplayOptions = {
+    delay: 2000,
+    rootNode: (emblaRoot: HTMLElement) => emblaRoot.parentElement,
+  };
+
   return (
     <section dir="rtl" className="py-20">
       <div className="container mx-auto px-4">
@@ -36,6 +43,7 @@ const Services = () => {
             align: "start",
             loop: true,
           }}
+          plugins={[Autoplay(autoplayOptions)]}
           className="w-full max-w-5xl mx-auto"
         >
           <CarouselContent className="-ml-2 md:-ml-4">
