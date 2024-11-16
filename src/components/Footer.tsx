@@ -19,9 +19,9 @@ const Footer = () => {
                 <Mail className="w-6 h-6 text-primary group-hover:scale-110 transition-transform" />
                 <span className="text-lg">support@greenhost.com</span>
               </div>
-              <div className="flex items-center gap-4 group hover:text-primary transition-colors duration-300">
+              <div className="flex items-center justify-end gap-4 group hover:text-primary transition-colors duration-300">
+                <span className="text-lg text-left" dir="ltr">+20 01030435987</span>
                 <Phone className="w-6 h-6 text-primary group-hover:scale-110 transition-transform" />
-                <span className="text-lg">+20 01030435987</span>
               </div>
               <div className="flex items-center gap-4 group hover:text-primary transition-colors duration-300">
                 <MapPin className="w-6 h-6 text-primary group-hover:scale-110 transition-transform" />
