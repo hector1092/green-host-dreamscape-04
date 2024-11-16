@@ -11,23 +11,23 @@ const CircuitBackground = () => {
           backgroundSize: '59%',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
-          filter: 'brightness(1.2)',
+          filter: 'brightness(1.5) contrast(1.1)',
         }}
       />
 
       {/* طبقة شفافة فاتحة */}
-      <div className="absolute inset-0 bg-white/20 backdrop-blur-[1px]" />
+      <div className="absolute inset-0 bg-white/30 backdrop-blur-[2px]" />
 
       {/* تأثيرات الإضاءة */}
       <div className="absolute inset-0">
         {/* تأثير التوهج المركزي */}
-        <div className="absolute w-full h-full bg-[radial-gradient(circle_700px_at_50%_50%,#ffffff15,transparent)]" />
+        <div className="absolute w-full h-full bg-[radial-gradient(circle_800px_at_50%_50%,#ffffff25,transparent)]" />
         
         {/* تأثيرات الإضاءة على الأطراف */}
-        <div className="absolute top-0 w-full h-[200px] bg-gradient-to-b from-white/10 to-transparent" />
-        <div className="absolute bottom-0 w-full h-[200px] bg-gradient-to-t from-white/10 to-transparent" />
-        <div className="absolute left-0 w-[200px] h-full bg-gradient-to-r from-white/10 to-transparent" />
-        <div className="absolute right-0 w-[200px] h-full bg-gradient-to-l from-white/10 to-transparent" />
+        <div className="absolute top-0 w-full h-[250px] bg-gradient-to-b from-white/20 to-transparent" />
+        <div className="absolute bottom-0 w-full h-[250px] bg-gradient-to-t from-white/20 to-transparent" />
+        <div className="absolute left-0 w-[250px] h-full bg-gradient-to-r from-white/20 to-transparent" />
+        <div className="absolute right-0 w-[250px] h-full bg-gradient-to-l from-white/20 to-transparent" />
       </div>
     </div>
   );
