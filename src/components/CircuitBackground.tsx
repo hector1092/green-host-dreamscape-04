@@ -8,7 +8,7 @@ const CircuitBackground = () => {
         className="absolute inset-0"
         style={{ 
           backgroundImage: 'url("/image/12.jpg")',
-          backgroundSize: 'cover',
+          backgroundSize: 'contain',
           backgroundRepeat: 'no-repeat',
           backgroundPosition: 'center',
         }}
