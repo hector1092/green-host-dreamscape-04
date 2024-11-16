@@ -14,6 +14,10 @@ export default {
       center: true,
       padding: "2rem",
       screens: {
+        sm: "640px",
+        md: "768px",
+        lg: "1024px",
+        xl: "1280px",
         "2xl": "1400px",
       },
     },
@@ -22,14 +26,17 @@ export default {
         primary: {
           DEFAULT: "#10B981",
           dark: "#059669",
+          light: "#34D399",
         },
         secondary: {
           DEFAULT: "#1F2937",
           dark: "#111827",
+          light: "#374151",
         },
         accent: {
           DEFAULT: "#E0F2FE",
           dark: "#0F172A",
+          light: "#F0F9FF",
         },
       },
       fontFamily: {
@@ -64,6 +71,10 @@ export default {
           "0%, 100%": { transform: "translateY(0)" },
           "50%": { transform: "translateY(-10px)" },
         },
+        "pulse-glow": {
+          "0%, 100%": { boxShadow: "0 0 20px rgba(16, 185, 129, 0.5)" },
+          "50%": { boxShadow: "0 0 40px rgba(16, 185, 129, 0.8)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -73,6 +84,11 @@ export default {
         "number-count": "number-count 1s ease-out forwards",
         "text-flow": "text-flow 3s linear infinite",
         "float": "float 3s ease-in-out infinite",
+        "pulse-glow": "pulse-glow 2s ease-in-out infinite",
+      },
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
     },
   },
