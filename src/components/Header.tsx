@@ -17,10 +17,10 @@ const Header = () => {
       <header className="relative min-h-screen flex items-center justify-center text-center bg-gradient-to-b from-white via-accent to-white" dir="rtl">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto animate-fade-in">
-            <h1 className="flex flex-row justify-center gap-8 text-7xl font-black mb-12">
-              <span className="text-blue-500 animate-float">السرعة</span>
-              <span className="text-green-500 animate-float" style={{ animationDelay: '0.2s' }}>الأمان</span>
-              <span className="text-purple-500 animate-float" style={{ animationDelay: '0.4s' }}>الاستقرار</span>
+            <h1 className="flex flex-col md:flex-row justify-center gap-8 text-6xl md:text-8xl lg:text-9xl font-black mb-12">
+              <span className="text-blue-500 animate-float drop-shadow-lg">السرعة</span>
+              <span className="text-green-500 animate-float drop-shadow-lg" style={{ animationDelay: '0.2s' }}>الأمان</span>
+              <span className="text-purple-500 animate-float drop-shadow-lg" style={{ animationDelay: '0.4s' }}>الاستقرار</span>
             </h1>
             <a 
               href="https://wa.me/201030435987" 
