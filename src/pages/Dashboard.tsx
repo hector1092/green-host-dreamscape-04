@@ -1,6 +1,6 @@
 import React from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Users, Settings, Mail, Database, Server, BarChart } from "lucide-react";
+import { Users, Settings, Mail, Database, Server, BarChart, Globe } from "lucide-react";
 import DomainManager from '../components/dashboard/DomainManager';
 import GeneralSettings from '../components/dashboard/GeneralSettings';
 import EmailManager from '../components/dashboard/EmailManager';
