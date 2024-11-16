@@ -11,7 +11,7 @@
   }
 
   body {
-    @apply bg-secondary text-white;
+    @apply bg-secondary text-[#F2FCE2];
   }
 }
 
@@ -21,7 +21,7 @@
   }
 
   .btn-primary {
-    @apply btn bg-[#33C3F0]/90 hover:bg-[#33C3F0] text-white shadow-lg shadow-[#33C3F0]/20 hover:shadow-[#33C3F0]/40 relative overflow-hidden backdrop-blur-sm;
+    @apply btn bg-[#10B981]/90 hover:bg-[#10B981] text-white shadow-lg shadow-[#10B981]/20 hover:shadow-[#10B981]/40 relative overflow-hidden backdrop-blur-sm;
   }
 
   .btn-primary::after {
@@ -33,7 +33,7 @@
   }
 
   .btn-outline {
-    @apply btn border-2 border-[#33C3F0]/80 text-[#33C3F0] hover:bg-[#33C3F0] hover:text-white shadow-lg shadow-[#33C3F0]/10 hover:shadow-[#33C3F0]/30 backdrop-blur-sm;
+    @apply btn border-2 border-[#10B981]/80 text-[#10B981] hover:bg-[#10B981] hover:text-white shadow-lg shadow-[#10B981]/10 hover:shadow-[#10B981]/30 backdrop-blur-sm;
   }
 
   .card {
@@ -41,7 +41,7 @@
   }
 
   .heading {
-    @apply text-5xl md:text-6xl font-bold text-[#E5DEFF] drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)] animate-text-flow;
+    @apply text-5xl md:text-6xl font-bold text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)] animate-text-flow;
   }
 
   .subheading {
@@ -50,15 +50,62 @@
 }
 
 .text-glow {
-  text-shadow: 0 0 20px rgba(51, 195, 240, 0.5);
+  text-shadow: 0 0 20px rgba(16, 185, 129, 0.5);
   animation: glow 2s ease-in-out infinite;
 }
 
 @keyframes glow {
   0%, 100% {
-    text-shadow: 0 0 20px rgba(51, 195, 240, 0.5);
+    text-shadow: 0 0 20px rgba(16, 185, 129, 0.5);
   }
   50% {
-    text-shadow: 0 0 30px rgba(51, 195, 240, 0.8);
+    text-shadow: 0 0 30px rgba(16, 185, 129, 0.8);
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes number-count {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes text-flow {
+  0% {
+    backgroundPosition: "0% 50%";
+  }
+  100% {
+    backgroundPosition: "200% 50%";
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
   }
 }

@@ -3,23 +3,30 @@ import React from 'react';
 const CircuitBackground = () => {
   return (
     <div className="fixed inset-0 -z-10 overflow-hidden">
-      {/* الصورة الثابتة كخلفية */}
+      {/* الصورة الأساسية كخلفية */}
       <div 
         className="absolute inset-0"
         style={{ 
           backgroundImage: 'url("/image/12.jpg")',
-          backgroundSize: 'contain',
-          backgroundRepeat: 'no-repeat',
+          backgroundSize: 'cover',
           backgroundPosition: 'center',
+          filter: 'brightness(1.2)',
         }}
       />
 
-      {/* طبقة شفافة للتباين */}
-      <div className="absolute inset-0 bg-black/50 backdrop-blur-[1px]" />
+      {/* طبقة شفافة فاتحة */}
+      <div className="absolute inset-0 bg-white/20 backdrop-blur-[1px]" />
 
-      {/* تأثير التوهج */}
+      {/* تأثيرات الإضاءة */}
       <div className="absolute inset-0">
-        <div className="absolute w-full h-full bg-[radial-gradient(circle_700px_at_50%_50%,#33C3F015,transparent)]" />
+        {/* تأثير التوهج المركزي */}
+        <div className="absolute w-full h-full bg-[radial-gradient(circle_700px_at_50%_50%,#ffffff15,transparent)]" />
+        
+        {/* تأثيرات الإضاءة على الأطراف */}
+        <div className="absolute top-0 w-full h-[200px] bg-gradient-to-b from-white/10 to-transparent" />
+        <div className="absolute bottom-0 w-full h-[200px] bg-gradient-to-t from-white/10 to-transparent" />
+        <div className="absolute left-0 w-[200px] h-full bg-gradient-to-r from-white/10 to-transparent" />
+        <div className="absolute right-0 w-[200px] h-full bg-gradient-to-l from-white/10 to-transparent" />
       </div>
     </div>
   );
