@@ -5,13 +5,14 @@ import AboutUsDialog from './AboutUsDialog';
 const Header = () => {
   return (
     <>
-      <div className="fixed top-0 left-0 p-4 flex items-center gap-2 z-50 bg-white/80 backdrop-blur-sm">
-        <Globe className="w-8 h-8 text-primary animate-spin" style={{ animationDuration: '10s' }} />
-        <span className="text-2xl font-bold bg-gradient-to-r from-primary to-blue-500 text-transparent bg-clip-text animate-text-flow">Green Host</span>
-      </div>
-      
-      <div className="fixed top-0 right-0 p-4 flex gap-4 z-50 bg-white/80 backdrop-blur-sm">
-        <AboutUsDialog />
+      <div className="fixed top-0 w-full flex justify-center items-center p-4 z-50 bg-white/80 backdrop-blur-sm">
+        <div className="flex items-center gap-2">
+          <Globe className="w-8 h-8 text-primary animate-spin" style={{ animationDuration: '10s' }} />
+          <span className="text-3xl font-bold bg-gradient-to-r from-primary to-blue-500 text-transparent bg-clip-text animate-text-flow">Green Host</span>
+        </div>
+        <div className="absolute right-4">
+          <AboutUsDialog />
+        </div>
       </div>
       
       <header className="relative min-h-screen flex items-center justify-center text-center bg-gradient-to-b from-white via-accent to-white" dir="rtl">
@@ -22,14 +23,18 @@ const Header = () => {
               <span className="text-green-500 animate-float drop-shadow-lg" style={{ animationDelay: '0.2s' }}>الأمان</span>
               <span className="text-purple-500 animate-float drop-shadow-lg" style={{ animationDelay: '0.4s' }}>الاستقرار</span>
             </h1>
-            <a 
-              href="https://wa.me/201030435987" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="btn-primary text-xl px-8 py-4 inline-flex items-center gap-3 hover:scale-105 transition-transform"
-            >
-              اشترك في أفضل خطط الاستضافة
-            </a>
+            <div className="space-y-4">
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-800">أفضل خطط الاستضافة بأسعار تنافسية</h2>
+              <p className="text-lg md:text-xl text-gray-600">ابدأ موقعك الآن بأقل الأسعار وأعلى جودة</p>
+              <a 
+                href="https://wa.me/201030435987" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="btn-primary text-xl px-8 py-4 inline-flex items-center gap-3 hover:scale-105 transition-transform"
+              >
+                اشترك في أفضل خطط الاستضافة
+              </a>
+            </div>
           </div>
         </div>
       </header>
