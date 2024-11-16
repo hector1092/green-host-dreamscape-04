@@ -5,16 +5,16 @@ import AboutUsDialog from './AboutUsDialog';
 const Header = () => {
   return (
     <>
-      <div className="fixed top-0 left-0 p-4 flex items-center gap-2 z-50 bg-secondary/80 backdrop-blur-sm">
+      <div className="fixed top-0 left-0 p-4 flex items-center gap-2 z-50 bg-white/80 backdrop-blur-sm">
         <Globe className="w-8 h-8 text-primary animate-spin" style={{ animationDuration: '10s' }} />
         <span className="text-2xl font-bold bg-gradient-to-r from-primary to-blue-500 text-transparent bg-clip-text animate-text-flow">Green Host</span>
       </div>
       
-      <div className="fixed top-0 right-0 p-4 flex gap-4 z-50 bg-secondary/80 backdrop-blur-sm">
+      <div className="fixed top-0 right-0 p-4 flex gap-4 z-50 bg-white/80 backdrop-blur-sm">
         <AboutUsDialog />
       </div>
       
-      <header className="relative min-h-screen flex items-center justify-center text-center" dir="rtl">
+      <header className="relative min-h-screen flex items-center justify-center text-center bg-gradient-to-b from-white via-accent to-white" dir="rtl">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto animate-fade-in">
             <h1 className="flex flex-row justify-center gap-8 text-7xl font-black mb-12">
