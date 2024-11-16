@@ -20,23 +20,6 @@ const Header = () => {
             </button>
             <button className="btn-outline text-xl">تواصل معنا</button>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-20">
-            {[
-              { icon: Server, text: "خوادم فائقة السرعة", desc: "سرعة استجابة عالية" },
-              { icon: Shield, text: "حماية متقدمة", desc: "حماية ضد الهجمات" },
-              { icon: Zap, text: "أداء عالي", desc: "تحميل سريع" },
-            ].map((item, index) => (
-              <div 
-                key={index} 
-                className="card flex flex-col items-center gap-4 hover:bg-white/10 transition-all duration-500"
-                style={{ animationDelay: `${index * 0.2}s` }}
-              >
-                <item.icon className="w-14 h-14 text-primary" />
-                <span className="font-medium text-lg">{item.text}</span>
-                <span className="text-sm text-gray-400">{item.desc}</span>
-              </div>
-            ))}
-          </div>
         </div>
       </div>
     </header>
