@@ -17,11 +17,19 @@
 
 @layer components {
   .btn {
-    @apply px-6 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105;
+    @apply px-8 py-4 rounded-lg font-medium transition-all duration-500 transform hover:scale-110;
   }
 
   .btn-primary {
-    @apply btn bg-primary hover:bg-primary-dark text-white shadow-lg shadow-primary/20 hover:shadow-primary/40;
+    @apply btn bg-primary hover:bg-primary-dark text-white shadow-lg shadow-primary/20 hover:shadow-primary/40 relative overflow-hidden;
+  }
+
+  .btn-primary::after {
+    @apply content-[''] absolute inset-0 bg-white/20 translate-x-[-100%] skew-x-[-15deg] transition-transform duration-700;
+  }
+
+  .btn-primary:hover::after {
+    @apply translate-x-[100%];
   }
 
   .btn-outline {
@@ -29,11 +37,11 @@
   }
 
   .card {
-    @apply bg-white/5 backdrop-blur-lg rounded-xl p-6 transition-all duration-300 hover:transform hover:scale-105 animate-fade-in;
+    @apply bg-white/5 backdrop-blur-lg rounded-xl p-8 transition-all duration-500 hover:transform hover:scale-105 hover:bg-white/10 animate-fade-in;
   }
 
   .heading {
-    @apply text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
+    @apply text-5xl md:text-6xl font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent bg-[length:200%_auto] animate-text-flow;
   }
 
   .subheading {
@@ -56,27 +64,21 @@
   }
 }
 
-@keyframes number-count {
-  from {
-    transform: translateY(100%);
-    opacity: 0;
+@keyframes text-flow {
+  0% {
+    background-position: 0% 50%;
   }
-  to {
-    transform: translateY(0);
-    opacity: 1;
+  100% {
+    background-position: 200% 50%;
   }
-}
-
-.animate-number-count {
-  animation: number-count 1s ease-out forwards;
 }
 
 @keyframes glow {
   0%, 100% {
-    text-shadow: 0 0 10px rgba(16, 185, 129, 0.5);
+    text-shadow: 0 0 20px rgba(16, 185, 129, 0.5);
   }
   50% {
-    text-shadow: 0 0 20px rgba(16, 185, 129, 0.8);
+    text-shadow: 0 0 30px rgba(16, 185, 129, 0.8);
   }
 }
 

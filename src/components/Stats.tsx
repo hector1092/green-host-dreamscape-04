@@ -35,11 +35,11 @@ const Stats = () => {
           {stats.map((stat, index) => (
             <div 
               key={index} 
-              className="card text-center transform hover:scale-105 transition-all duration-300"
+              className="card text-center transform hover:scale-105 transition-all duration-500"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
-              <stat.icon className="w-12 h-12 text-primary mx-auto mb-4" />
-              <div className="text-4xl font-bold text-primary mb-2">
+              <stat.icon className="w-16 h-16 text-primary mx-auto mb-6" />
+              <div className="text-5xl font-bold text-primary mb-4 text-glow">
                 {isVisible ? (
                   <span className="animate-number-count">
                     {stat.value}
@@ -49,7 +49,7 @@ const Stats = () => {
                   "0"
                 )}
               </div>
-              <div className="text-gray-400">{stat.label}</div>
+              <div className="text-xl text-gray-400">{stat.label}</div>
             </div>
           ))}
         </div>
