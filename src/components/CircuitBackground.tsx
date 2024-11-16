@@ -5,11 +5,12 @@ const CircuitBackground = () => {
     <div className="fixed inset-0 -z-10 overflow-hidden">
       {/* الصورة الأساسية كخلفية */}
       <div 
-        className="absolute inset-0"
+        className="absolute inset-0 mx-auto"
         style={{ 
           backgroundImage: 'url("/image/12.jpg")',
-          backgroundSize: 'cover',
+          backgroundSize: '95%',  // تصغير حجم الخلفية إلى 95%
           backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
           filter: 'brightness(1.2)',
         }}
       />
