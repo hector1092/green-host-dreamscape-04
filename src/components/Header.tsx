@@ -6,9 +6,11 @@ const Header = () => {
   return (
     <>
       <div className="fixed top-0 w-full flex justify-center items-center p-4 z-50 bg-white/80 backdrop-blur-sm">
-        <div className="flex items-center gap-2">
-          <Globe className="w-8 h-8 text-primary animate-spin" style={{ animationDuration: '10s' }} />
-          <span className="text-3xl font-bold bg-gradient-to-r from-primary to-blue-500 text-transparent bg-clip-text animate-text-flow">Green Host</span>
+        <div className="flex items-center gap-3">
+          <Globe className="w-10 h-10 text-primary animate-spin" style={{ animationDuration: '10s' }} />
+          <span className="text-5xl font-extrabold bg-gradient-to-r from-primary via-blue-500 to-primary text-transparent bg-clip-text animate-text-flow">
+            Green Host
+          </span>
         </div>
         <div className="absolute right-4">
           <AboutUsDialog />
