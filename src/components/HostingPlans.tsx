@@ -1,5 +1,6 @@
 import React from 'react';
 import { HardDrive, Network, Mail, Globe, Database, Shield, Clock } from 'lucide-react';
+import { Button } from './ui/button';
 
 const plans = [
   {
@@ -59,6 +60,10 @@ const plans = [
 ];
 
 const HostingPlans = () => {
+  const handleSubscribe = (planName: string) => {
+    console.log(`تم اختيار ${planName}`);
+  };
+
   return (
     <section id="hosting-plans" className="py-20">
       <div className="container mx-auto px-4">
@@ -68,7 +73,7 @@ const HostingPlans = () => {
           {plans.map((plan, index) => (
             <div 
               key={index} 
-              className={`bg-secondary/80 p-8 rounded-xl shadow-lg hover:transform hover:scale-105 transition-all duration-300 relative ${
+              className={`bg-secondary/80 p-8 rounded-xl shadow-lg ${
                 plan.popular ? 'ring-2 ring-primary' : ''
               }`}
             >
@@ -92,13 +97,16 @@ const HostingPlans = () => {
                     </li>
                   ))}
                 </ul>
-                <button className={`w-full py-3 px-6 rounded-lg font-bold transition-all duration-300 ${
-                  plan.popular 
-                    ? 'bg-primary text-white hover:bg-primary/90'
-                    : 'bg-secondary-foreground/10 text-white hover:bg-secondary-foreground/20'
-                }`}>
-                  اختر الخطة
-                </button>
+                <Button 
+                  onClick={() => handleSubscribe(plan.name)}
+                  className={`w-full ${
+                    plan.popular 
+                      ? 'bg-primary hover:bg-primary/90'
+                      : 'bg-secondary-foreground/10 hover:bg-secondary-foreground/20'
+                  }`}
+                >
+                  اشترك الآن
+                </Button>
               </div>
             </div>
           ))}
