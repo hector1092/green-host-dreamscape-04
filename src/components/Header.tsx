@@ -19,17 +19,17 @@ const Header = () => {
       
       <header className="relative min-h-screen flex items-center text-right" dir="rtl">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl animate-fade-in flex items-center gap-8">
-            <div>
+          <div className="max-w-3xl animate-fade-in flex items-center gap-4">
+            <div className="flex items-center gap-4">
               <h1 className="heading mb-6">
                 استضافة متطورة وآمنة مع
                 <span className="block text-primary text-glow">Green Host</span>
               </h1>
-              <p className="subheading mb-12 animate-fade-in opacity-0" style={{ animationDelay: '0.3s' }}>
-                نقدم لك أفضل خدمات الاستضافة مع دعم فني متميز على مدار الساعة
-              </p>
+              <Globe className="w-16 h-16 text-primary animate-spin" style={{ animationDuration: '10s' }} />
             </div>
-            <Globe className="w-32 h-32 text-primary animate-spin" style={{ animationDuration: '10s' }} />
+            <p className="subheading mb-12 animate-fade-in opacity-0" style={{ animationDelay: '0.3s' }}>
+              نقدم لك أفضل خدمات الاستضافة مع دعم فني متميز على مدار الساعة
+            </p>
           </div>
         </div>
       </header>
