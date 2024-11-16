@@ -65,17 +65,15 @@ const HostingPlans = () => {
   };
 
   return (
-    <section id="hosting-plans" className="py-20">
+    <section id="hosting-plans" className="section">
       <div className="container mx-auto px-4">
         <h2 className="heading text-center mb-4">خطط الاستضافة</h2>
-        <p className="text-gray-200 font-bold text-center mb-16">اختر الخطة المناسبة لمشروعك</p>
+        <p className="subheading text-center mb-16">اختر الخطة المناسبة لمشروعك</p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {plans.map((plan, index) => (
             <div 
               key={index} 
-              className={`bg-secondary/80 p-8 rounded-xl shadow-lg hover:transform hover:scale-105 transition-all duration-300 relative ${
-                plan.popular ? 'ring-2 ring-primary' : ''
-              }`}
+              className={`card ${plan.popular ? 'ring-2 ring-primary' : ''}`}
             >
               {plan.popular && (
                 <span className="absolute -top-3 right-4 bg-primary text-white px-4 py-1 rounded-full text-sm">
@@ -99,7 +97,7 @@ const HostingPlans = () => {
                 </ul>
                 <Button 
                   onClick={handleSubscribe}
-                  className="w-full bg-primary hover:bg-primary/90 text-white font-bold"
+                  className="w-full bg-primary hover:bg-primary-dark text-white font-bold transition-all duration-300 shadow-lg shadow-primary/20 hover:shadow-primary/40"
                   size="lg"
                 >
                   اشترك الآن

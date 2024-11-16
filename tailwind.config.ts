@@ -23,8 +23,14 @@ export default {
           DEFAULT: "#10B981",
           dark: "#059669",
         },
-        secondary: "#1F2937",
-        accent: "#E0F2FE",
+        secondary: {
+          DEFAULT: "#1F2937",
+          dark: "#111827",
+        },
+        accent: {
+          DEFAULT: "#E0F2FE",
+          dark: "#0F172A",
+        },
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],

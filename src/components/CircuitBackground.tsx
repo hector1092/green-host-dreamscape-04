@@ -14,8 +14,7 @@ const CircuitBackground = () => {
           height: '100%'
         }}
       />
-      {/* طبقة شفافة خفيفة للتباين */}
-      <div className="absolute inset-0 bg-black/20" />
+      <div className="absolute inset-0 bg-gradient-to-b from-secondary-dark/50 to-accent-dark/70" />
     </div>
   );
 };
