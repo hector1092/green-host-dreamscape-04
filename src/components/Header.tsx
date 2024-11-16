@@ -15,7 +15,6 @@ const Header = () => {
         <Link to="/login" className="btn-outline text-lg flex items-center gap-2">
           لوحة التحكم
         </Link>
-        <button className="btn-outline text-lg">تواصل معنا</button>
         <AboutUsDialog />
       </div>
       
