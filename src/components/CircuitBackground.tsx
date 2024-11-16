@@ -7,8 +7,8 @@ const CircuitBackground = () => {
       <div 
         className="absolute inset-0 mx-auto"
         style={{ 
-          backgroundImage: 'url("/image/12.jpg")',
-          backgroundSize: '59%',  // تصغير حجم الخلفية إلى 59%
+          backgroundImage: 'url("/image/website-hosting-concept-with-screen_23-2149406775.jpg")',
+          backgroundSize: '59%',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
           filter: 'brightness(1.2)',
