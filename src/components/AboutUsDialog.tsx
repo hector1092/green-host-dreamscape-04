@@ -10,9 +10,8 @@ const AboutUsDialog = () => {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <button className="btn-primary text-lg group">
+        <button className="btn-primary text-lg">
           من نحن
-          <span className="absolute inset-0 bg-white/20 translate-x-[-100%] skew-x-[-15deg] group-hover:translate-x-[100%] transition-transform duration-700" />
         </button>
       </DialogTrigger>
       <DialogContent className="max-w-3xl max-h-[80vh] overflow-y-auto" dir="rtl">
