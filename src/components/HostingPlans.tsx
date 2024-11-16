@@ -47,13 +47,13 @@ const plans = [
     description: "الحل الأمثل للمشاريع الكبيرة",
     popular: true,
     features: [
-      { text: "مساحة غير محدودة", icon: HardDrive },
-      { text: "باندويدث غير محدود", icon: Network },
-      { text: "إيميلات رسمية غير محدودة", icon: Mail },
-      { text: "ربط الدومين مع الاستضافة", icon: Globe },
-      { text: "تركيب ووردبريس", icon: Database },
-      { text: "حماية متقدمة من الفيروسات", icon: Shield },
-      { text: "دعم فني متقدم 24/7", icon: Clock },
+      { text: "مساحة تخزينية غير محدودة", icon: HardDrive },
+      { text: "نقل بيانات شهري غير محدود", icon: Network },
+      { text: "عدد غير محدود من الإيميلات الرسمية", icon: Mail },
+      { text: "ربط مجاني للدومين مع الاستضافة", icon: Globe },
+      { text: "تركيب وتجهيز ووردبريس", icon: Database },
+      { text: "حماية متقدمة من الفيروسات والهجمات", icon: Shield },
+      { text: "دعم فني متميز على مدار الساعة", icon: Clock },
     ]
   }
 ];
