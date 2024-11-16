@@ -1,50 +1,19 @@
 import React from 'react';
-import { Facebook, Twitter, Instagram, Mail, Phone, MapPin } from 'lucide-react';
+import { Phone } from 'lucide-react';
 
 const Footer = () => {
   return (
-    <footer className="bg-secondary/50 backdrop-blur-lg py-16 text-right" dir="rtl">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-          <div className="space-y-6">
-            <h3 className="text-3xl font-bold text-primary mb-6">Green Host</h3>
-            <p className="text-gray-400 text-lg leading-relaxed">
-              نقدم أفضل خدمات الاستضافة بأسعار تنافسية مع دعم فني متميز
-            </p>
-          </div>
-          <div className="space-y-6">
-            <h4 className="text-2xl font-bold mb-6">تواصل معنا</h4>
-            <div className="space-y-4">
-              <div className="flex items-center gap-4 group hover:text-primary transition-colors duration-300">
-                <Mail className="w-6 h-6 text-primary group-hover:scale-110 transition-transform" />
-                <span className="text-lg">support@greenhost.com</span>
-              </div>
-              <div className="flex items-center gap-4 group hover:text-primary transition-colors duration-300">
-                <Phone className="w-6 h-6 text-primary group-hover:scale-110 transition-transform" />
-                <span className="text-lg">+20 01030435987</span>
-              </div>
-              <div className="flex items-center gap-4 group hover:text-primary transition-colors duration-300">
-                <MapPin className="w-6 h-6 text-primary group-hover:scale-110 transition-transform" />
-                <span className="text-lg">القاهرة، مصر</span>
-              </div>
-            </div>
-          </div>
-          <div className="space-y-6">
-            <h4 className="text-2xl font-bold mb-6">تابعنا</h4>
-            <div className="flex gap-6">
-              {[
-                { icon: Facebook, link: "#" },
-                { icon: Twitter, link: "#" },
-                { icon: Instagram, link: "#" },
-              ].map((social, index) => (
-                <a
-                  key={index}
-                  href={social.link}
-                  className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-500 transform hover:scale-110 hover:rotate-6"
-                >
-                  <social.icon className="w-6 h-6" />
-                </a>
-              ))}
+    <footer className="bg-secondary/50 backdrop-blur-lg py-16 text-center">
+      <div className="container mx-auto px-4 max-w-3xl">
+        <div className="space-y-8">
+          <h3 className="text-4xl font-bold text-primary mb-6">Green Host</h3>
+          <div className="space-y-4 text-gray-200">
+            <p className="text-2xl font-semibold">جاهز لتحقيق أحلامك الرقمية؟</p>
+            <p className="text-lg">مع Green Host، رحلتك إلى النجاح تبدأ بخطوة واحدة.</p>
+            <p className="text-lg">لا تتردد، انضم إلينا اليوم واستمتع بتجربة استضافة استثنائية! 🌐</p>
+            <div className="flex items-center justify-center gap-2 text-primary">
+              <Phone className="w-5 h-5" />
+              <p className="text-lg">دعم فني دائم | خدمات متميزة | نجاح مضمون</p>
             </div>
           </div>
         </div>
