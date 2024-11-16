@@ -31,13 +31,13 @@ const WelcomeMessage = () => {
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
-      <DialogContent className="sm:max-w-[800px] animate-fade-in bg-gradient-to-br from-secondary/95 to-secondary-dark/90 backdrop-blur-sm border border-primary/20">
+      <DialogContent className="sm:max-w-[800px] animate-fade-in bg-gradient-to-br from-secondary/95 to-secondary-dark/90 backdrop-blur-sm border border-primary/20" dir="rtl">
         <DialogHeader className="space-y-6">
           <DialogTitle className="text-5xl font-bold bg-gradient-to-r from-primary via-primary-dark to-primary bg-clip-text text-transparent animate-text-flow text-center mb-8">
             <Rocket className="w-12 h-12 mx-auto mb-4 text-primary animate-float" />
             مرحباً بكم في Green Host
           </DialogTitle>
-          <DialogDescription className="text-lg space-y-8">
+          <DialogDescription className="text-lg space-y-8 text-right">
             <div className="flex items-start gap-4 p-4 rounded-lg bg-secondary-dark/50 animate-fade-in" style={{ animationDelay: '0.2s' }}>
               <Server className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
               <p className="text-xl font-medium text-primary/90">
