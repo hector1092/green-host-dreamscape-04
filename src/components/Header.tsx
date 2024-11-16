@@ -6,12 +6,12 @@ import AboutUsDialog from './AboutUsDialog';
 const Header = () => {
   return (
     <>
-      <div className="fixed top-0 left-0 p-4 flex items-center gap-2 z-50">
+      <div className="fixed top-0 left-0 p-4 flex items-center gap-2 z-50 bg-secondary/80 backdrop-blur-sm">
         <Globe className="w-8 h-8 text-primary animate-spin" style={{ animationDuration: '10s' }} />
         <span className="text-2xl font-bold bg-gradient-to-r from-primary to-blue-500 text-transparent bg-clip-text animate-text-flow">Green Host</span>
       </div>
       
-      <div className="fixed top-0 right-0 p-4 flex gap-4 z-50">
+      <div className="fixed top-0 right-0 p-4 flex gap-4 z-50 bg-secondary/80 backdrop-blur-sm">
         <Link 
           to="/login" 
           className="relative overflow-hidden group px-8 py-3 text-lg font-bold rounded-xl bg-gradient-to-r from-primary via-blue-500 to-primary bg-[length:200%_100%] hover:bg-[100%_0] transition-all duration-500"
