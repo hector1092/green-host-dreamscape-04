@@ -3,7 +3,7 @@ import { Server, Shield, Zap } from 'lucide-react';
 
 const Header = () => {
   return (
-    <header className="relative min-h-screen flex items-center">
+    <header className="relative min-h-screen flex items-center text-right" dir="rtl">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl animate-fade-in">
           <h1 className="heading mb-6">

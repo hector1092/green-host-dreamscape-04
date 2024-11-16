@@ -65,7 +65,7 @@ const HostingPlans = () => {
   };
 
   return (
-    <section>
+    <section dir="rtl">
       <div className="container mx-auto px-4">
         <h2 className="heading text-center mb-4">خطط الاستضافة</h2>
         <p className="subheading text-center mb-16">اختر الخطة المناسبة لمشروعك</p>
