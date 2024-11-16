@@ -44,15 +44,15 @@ export const generateOTP = (): string => {
 };
 
 export const sendOTP = async (otp: string): Promise<void> => {
+  // تنسيق رسالة WhatsApp
+  const message = `رمز التحقق الخاص بك في Green Host هو: ${otp}`;
+  
+  // إنشاء رابط WhatsApp مع الرسالة المشفرة
+  const encodedMessage = encodeURIComponent(message);
+  const phoneNumber = "201030435987"; // تأكد من أن رقم الهاتف صحيح
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+  
   try {
-    // تنسيق رسالة WhatsApp
-    const message = `رمز التحقق الخاص بك في Green Host هو: ${otp}`;
-    
-    // إنشاء رابط WhatsApp مع الرسالة المشفرة
-    const encodedMessage = encodeURIComponent(message);
-    const phoneNumber = "201030435987"; // تأكد من أن رقم الهاتف صحيح
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
-    
     // فتح WhatsApp في نافذة جديدة
     const newWindow = window.open(whatsappUrl, '_blank');
     
@@ -63,6 +63,6 @@ export const sendOTP = async (otp: string): Promise<void> => {
   } catch (error) {
     console.error("خطأ في فتح WhatsApp:", error);
     // يمكننا إعادة توجيه المستخدم مباشرة إذا فشل فتح النافذة الجديدة
-    window.location.href = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+    window.location.href = whatsappUrl;
   }
 };
