@@ -40,7 +40,7 @@ const PaymentMethods = () => {
                 <img 
                   src={method.icon}
                   alt={method.name}
-                  className="w-16 h-16 transition-transform duration-300 hover:scale-110 filter brightness-0 invert"
+                  className="w-16 h-16 transition-transform duration-300 hover:scale-110 brightness-0 invert"
                 />
               </div>
               <h3 className="text-xl font-bold mb-2 text-white">{method.name}</h3>
