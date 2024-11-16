@@ -44,10 +44,7 @@ export const generateOTP = (): string => {
 };
 
 export const sendOTP = async (otp: string): Promise<void> => {
-  // تحسين رسالة WhatsApp
   const message = encodeURIComponent(`رمز التحقق الخاص بك في Green Host هو: ${otp}`);
-  const whatsappUrl = `https://api.whatsapp.com/send?phone=201030435987&text=${message}`;
-  
-  // فتح WhatsApp في نافذة جديدة
+  const whatsappUrl = `https://wa.me/201030435987?text=${message}`;
   window.location.href = whatsappUrl;
 };
