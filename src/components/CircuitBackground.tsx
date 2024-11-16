@@ -8,8 +8,8 @@ const CircuitBackground = () => {
         className="absolute inset-0 mx-auto"
         style={{ 
           backgroundImage: 'url("/image/21.png")',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
+          backgroundSize: 'contain',
+          backgroundPosition: 'center center',
           backgroundRepeat: 'no-repeat',
           filter: 'brightness(1.5) contrast(1.1)',
         }}
