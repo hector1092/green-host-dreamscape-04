@@ -30,14 +30,14 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-secondary p-4" dir="rtl">
+    <div className="min-h-screen flex items-center justify-center bg-secondary/50 backdrop-blur-sm p-4" dir="rtl">
       <div className="w-full max-w-md space-y-8">
         <div className="text-center">
           <Shield className="mx-auto h-12 w-12 text-primary" />
           <h2 className="mt-6 text-3xl font-bold text-white">تسجيل الدخول للوحة التحكم</h2>
         </div>
         
-        <form className="mt-8 space-y-6" onSubmit={handleLogin}>
+        <form className="mt-8 space-y-6 card" onSubmit={handleLogin}>
           <div className="space-y-4">
             <div>
               <label className="block text-sm font-medium text-gray-200">اسم المستخدم</label>
@@ -45,8 +45,9 @@ const Login = () => {
                 type="text"
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
-                className="mt-1"
+                className="mt-1 bg-secondary-dark/50 border-white/10"
                 dir="ltr"
+                autoComplete="off"
               />
             </div>
             
@@ -56,8 +57,9 @@ const Login = () => {
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="mt-1"
+                className="mt-1 bg-secondary-dark/50 border-white/10"
                 dir="ltr"
+                autoComplete="off"
               />
             </div>
           </div>
