@@ -8,28 +8,28 @@ const PaymentMethods = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {[
             {
-              icon: "/icons/image-_2_.ico",
+              icon: "/icons/image_-_2_.png",
               name: "فودافون كاش",
               description: "ادفع بسهولة عبر محفظة فودافون كاش",
               bgColor: "bg-red-500/10"
             },
             {
-              icon: "/icons/image-_3_.ico",
+              icon: "/icons/image_-_3_.png",
               name: "إنستا باي",
               description: "الدفع السريع عبر إنستا باي",
               bgColor: "bg-purple-500/10"
             },
             {
-              icon: "/icons/image-_4_.ico",
-              name: "بطاقة فيزا/ماستركارد",
-              description: "ادفع باستخدام بطاقتك البنكية",
-              bgColor: "bg-blue-500/10"
-            },
-            {
-              icon: "/icons/image-_5_.ico",
+              icon: "/icons/image_-_4_.png",
               name: "تحويل بنكي",
               description: "حول المبلغ مباشرة إلى حسابنا البنكي",
               bgColor: "bg-green-500/10"
+            },
+            {
+              icon: "/icons/image_-_5_.png",
+              name: "بطاقة فيزا/ماستركارد",
+              description: "ادفع باستخدام بطاقتك البنكية",
+              bgColor: "bg-blue-500/10"
             }
           ].map((method, index) => (
             <div
