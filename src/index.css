@@ -21,15 +21,15 @@
   }
 
   .btn-primary {
-    @apply btn bg-primary hover:bg-primary-dark text-white;
+    @apply btn bg-primary hover:bg-primary-dark text-white shadow-lg shadow-primary/20 hover:shadow-primary/40;
   }
 
   .btn-outline {
-    @apply btn border-2 border-primary text-primary hover:bg-primary hover:text-white;
+    @apply btn border-2 border-primary text-primary hover:bg-primary hover:text-white shadow-lg shadow-primary/10 hover:shadow-primary/30;
   }
 
   .card {
-    @apply bg-white/5 backdrop-blur-lg rounded-xl p-6 transition-all duration-300 hover:transform hover:scale-105;
+    @apply bg-white/5 backdrop-blur-lg rounded-xl p-6 transition-all duration-300 hover:transform hover:scale-105 animate-fade-in;
   }
 
   .heading {
@@ -54,4 +54,32 @@
   100% {
     background-position: 50px 50px;
   }
+}
+
+@keyframes number-count {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-number-count {
+  animation: number-count 1s ease-out forwards;
+}
+
+@keyframes glow {
+  0%, 100% {
+    text-shadow: 0 0 10px rgba(16, 185, 129, 0.5);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(16, 185, 129, 0.8);
+  }
+}
+
+.text-glow {
+  animation: glow 2s ease-in-out infinite;
 }
