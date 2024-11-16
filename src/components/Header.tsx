@@ -8,12 +8,18 @@ const Header = () => {
     <>
       <div className="fixed top-0 left-0 p-4 flex items-center gap-2 z-50">
         <Globe className="w-8 h-8 text-primary animate-spin" style={{ animationDuration: '10s' }} />
-        <span className="text-2xl font-bold text-primary">Green Host</span>
+        <span className="text-2xl font-bold bg-gradient-to-r from-primary to-blue-500 text-transparent bg-clip-text animate-text-flow">Green Host</span>
       </div>
       
       <div className="fixed top-0 right-0 p-4 flex gap-4 z-50">
-        <Link to="/login" className="btn-outline text-lg flex items-center gap-2">
-          لوحة التحكم
+        <Link 
+          to="/login" 
+          className="relative overflow-hidden group px-8 py-3 text-lg font-bold rounded-xl bg-gradient-to-r from-primary via-blue-500 to-primary bg-[length:200%_100%] hover:bg-[100%_0] transition-all duration-500"
+        >
+          <span className="relative z-10 text-white group-hover:text-white transition-colors">
+            لوحة التحكم
+          </span>
+          <div className="absolute inset-0 bg-gradient-to-r from-primary-dark via-blue-600 to-primary-dark opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
         </Link>
         <AboutUsDialog />
       </div>
