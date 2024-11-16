@@ -5,10 +5,11 @@ const CircuitBackground = () => {
     <div className="fixed inset-0 -z-10 overflow-hidden">
       {/* الصورة الثابتة كخلفية */}
       <div 
-        className="absolute inset-0 bg-contain bg-center bg-no-repeat"
+        className="absolute inset-0"
         style={{ 
           backgroundImage: 'url("/image/12.jpg")',
-          backgroundSize: 'cover',
+          backgroundSize: 'contain',
+          backgroundRepeat: 'no-repeat',
           backgroundPosition: 'center',
         }}
       />
@@ -18,7 +19,7 @@ const CircuitBackground = () => {
 
       {/* تأثير التوهج */}
       <div className="absolute inset-0">
-        <div className="absolute w-full h-full bg-[radial-gradient(circle_700px_at_50%_50%,#10b98115,transparent)]" />
+        <div className="absolute w-full h-full bg-[radial-gradient(circle_700px_at_50%_50%,#33C3F015,transparent)]" />
       </div>
     </div>
   );

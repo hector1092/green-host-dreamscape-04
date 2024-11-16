@@ -21,7 +21,7 @@
   }
 
   .btn-primary {
-    @apply btn bg-primary/90 hover:bg-primary text-white shadow-lg shadow-primary/20 hover:shadow-primary/40 relative overflow-hidden backdrop-blur-sm;
+    @apply btn bg-[#33C3F0]/90 hover:bg-[#33C3F0] text-white shadow-lg shadow-[#33C3F0]/20 hover:shadow-[#33C3F0]/40 relative overflow-hidden backdrop-blur-sm;
   }
 
   .btn-primary::after {
@@ -33,7 +33,7 @@
   }
 
   .btn-outline {
-    @apply btn border-2 border-primary/80 text-primary hover:bg-primary hover:text-white shadow-lg shadow-primary/10 hover:shadow-primary/30 backdrop-blur-sm;
+    @apply btn border-2 border-[#33C3F0]/80 text-[#33C3F0] hover:bg-[#33C3F0] hover:text-white shadow-lg shadow-[#33C3F0]/10 hover:shadow-[#33C3F0]/30 backdrop-blur-sm;
   }
 
   .card {
@@ -41,24 +41,24 @@
   }
 
   .heading {
-    @apply text-5xl md:text-6xl font-bold text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)] animate-text-flow;
+    @apply text-5xl md:text-6xl font-bold text-[#E5DEFF] drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)] animate-text-flow;
   }
 
   .subheading {
-    @apply text-xl text-gray-100 drop-shadow-[0_1px_2px_rgba(0,0,0,0.3)] backdrop-blur-sm;
+    @apply text-xl text-[#F2FCE2] drop-shadow-[0_1px_2px_rgba(0,0,0,0.3)] backdrop-blur-sm;
   }
 }
 
 .text-glow {
-  text-shadow: 0 0 20px rgba(16, 185, 129, 0.5);
+  text-shadow: 0 0 20px rgba(51, 195, 240, 0.5);
   animation: glow 2s ease-in-out infinite;
 }
 
 @keyframes glow {
   0%, 100% {
-    text-shadow: 0 0 20px rgba(16, 185, 129, 0.5);
+    text-shadow: 0 0 20px rgba(51, 195, 240, 0.5);
   }
   50% {
-    text-shadow: 0 0 30px rgba(16, 185, 129, 0.8);
+    text-shadow: 0 0 30px rgba(51, 195, 240, 0.8);
   }
 }
