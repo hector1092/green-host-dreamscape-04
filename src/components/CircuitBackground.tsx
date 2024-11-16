@@ -1,5 +1,4 @@
 import React from 'react';
-import { CircuitBoard, Globe, Shield, Server, Sparkles } from 'lucide-react';
 
 const CircuitBackground = () => {
   return (
@@ -14,17 +13,6 @@ const CircuitBackground = () => {
 
       {/* طبقة شفافة للتباين */}
       <div className="absolute inset-0 bg-black/40 backdrop-blur-sm" />
-
-      {/* الأيقونات */}
-      <div className="absolute inset-0">
-        <div className="container mx-auto h-full relative">
-          <Globe className="absolute top-1/4 left-1/4 w-12 h-12 text-primary/60" />
-          <Shield className="absolute top-1/3 right-1/3 w-10 h-10 text-primary/50" />
-          <Server className="absolute bottom-1/3 left-1/3 w-8 h-8 text-primary/40" />
-          <CircuitBoard className="absolute bottom-1/4 right-1/4 w-10 h-10 text-primary/50" />
-          <Sparkles className="absolute top-1/2 left-1/2 w-12 h-12 text-primary/60" />
-        </div>
-      </div>
 
       {/* تأثير التوهج */}
       <div className="absolute inset-0">
