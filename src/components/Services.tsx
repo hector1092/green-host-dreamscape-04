@@ -1,5 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Server, Mail, Code } from 'lucide-react';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const services = [
   {
@@ -20,50 +27,35 @@ const services = [
 ];
 
 const Services = () => {
-  const [activeIndex, setActiveIndex] = useState(-1);
-
-  useEffect(() => {
-    const animateCards = () => {
-      setActiveIndex(-1); // Reset animation
-      
-      // Start animation sequence
-      services.forEach((_, index) => {
-        setTimeout(() => {
-          setActiveIndex(index);
-        }, index * 500); // 500ms delay between each card
-      });
-    };
-
-    // Initial animation
-    animateCards();
-
-    // Set up interval for repeated animation
-    const interval = setInterval(animateCards, 7000);
-
-    return () => clearInterval(interval);
-  }, []);
-
   return (
-    <section dir="rtl">
+    <section dir="rtl" className="py-20">
       <div className="container mx-auto px-4">
         <h2 className="heading text-center mb-16">خدماتنا</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <div 
-              key={index}
-              className={`bg-secondary/80 p-8 rounded-xl shadow-lg transition-all duration-1000 ease-in-out transform
-                ${activeIndex >= index ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'}`}
-            >
-              <div className="flex flex-col items-center text-center gap-6">
-                <div className="p-4 bg-primary/10 rounded-full group-hover:bg-primary/20 transition-colors duration-300">
-                  <service.icon className="w-10 h-10 text-primary" />
+        <Carousel
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+          className="w-full max-w-5xl mx-auto"
+        >
+          <CarouselContent className="-ml-2 md:-ml-4">
+            {services.map((service, index) => (
+              <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/3">
+                <div className="bg-secondary/80 p-8 rounded-xl shadow-lg transition-all duration-1000 ease-in-out transform hover:scale-105">
+                  <div className="flex flex-col items-center text-center gap-6">
+                    <div className="p-4 bg-primary/10 rounded-full group-hover:bg-primary/20 transition-colors duration-300">
+                      <service.icon className="w-10 h-10 text-primary" />
+                    </div>
+                    <h3 className="text-xl font-bold text-white">{service.title}</h3>
+                    <p className="text-gray-300">{service.description}</p>
+                  </div>
                 </div>
-                <h3 className="text-xl font-bold text-white">{service.title}</h3>
-                <p className="text-gray-300">{service.description}</p>
-              </div>
-            </div>
-          ))}
-        </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious className="hidden md:flex" />
+          <CarouselNext className="hidden md:flex" />
+        </Carousel>
       </div>
     </section>
   );
