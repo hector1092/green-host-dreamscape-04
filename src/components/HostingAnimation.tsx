@@ -56,22 +56,6 @@ const HostingAnimation = () => {
             <p className="text-sm text-gray-600 text-center">بريد إلكتروني، نسخ احتياطي، حماية</p>
           </div>
         </div>
-
-        {/* Features List */}
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="text-center animate-fade-in" style={{ animationDelay: '0.6s' }}>
-            <h4 className="font-semibold mb-2">سرعة فائقة</h4>
-            <p className="text-sm text-gray-600">خوادم عالية الأداء لتحميل سريع</p>
-          </div>
-          <div className="text-center animate-fade-in" style={{ animationDelay: '0.8s' }}>
-            <h4 className="font-semibold mb-2">حماية متكاملة</h4>
-            <p className="text-sm text-gray-600">حماية ضد الهجمات ونسخ احتياطي</p>
-          </div>
-          <div className="text-center animate-fade-in" style={{ animationDelay: '1s' }}>
-            <h4 className="font-semibold mb-2">دعم فني 24/7</h4>
-            <p className="text-sm text-gray-600">فريق دعم فني متخصص</p>
-          </div>
-        </div>
       </div>
     </div>
   );
