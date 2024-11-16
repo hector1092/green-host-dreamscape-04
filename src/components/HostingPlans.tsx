@@ -1,5 +1,5 @@
 import React from 'react';
-import { HardDrive, Network, Mail, Globe, Database, Shield, Clock, Check } from 'lucide-react';
+import { HardDrive, Network, Mail, Globe, Database, Shield, Clock } from 'lucide-react';
 
 const plans = [
   {
@@ -60,7 +60,7 @@ const plans = [
 
 const HostingPlans = () => {
   return (
-    <section className="py-20">
+    <section id="hosting-plans" className="py-20">
       <div className="container mx-auto px-4">
         <h2 className="heading text-center mb-4">خطط الاستضافة</h2>
         <p className="text-gray-200 font-bold text-center mb-16">اختر الخطة المناسبة لمشروعك</p>
