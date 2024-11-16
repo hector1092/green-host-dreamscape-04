@@ -54,6 +54,10 @@ export default {
           "0%": { backgroundPosition: "0% 50%" },
           "100%": { backgroundPosition: "200% 50%" },
         },
+        "float": {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-10px)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -62,6 +66,7 @@ export default {
         "slide-left": "slide-left 20s linear infinite",
         "number-count": "number-count 1s ease-out forwards",
         "text-flow": "text-flow 3s linear infinite",
+        "float": "float 3s ease-in-out infinite",
       },
     },
   },
