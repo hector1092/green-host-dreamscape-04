@@ -8,25 +8,25 @@ const PaymentMethods = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {[
             {
-              icon: "/public/icons/image-_5_.ico",
+              icon: "/icons/image-_5_.ico",
               name: "فودافون كاش",
               description: "ادفع بسهولة عبر محفظة فودافون كاش",
               bgColor: "bg-red-500/10"
             },
             {
-              icon: "/public/icons/image-_4_.ico",
+              icon: "/icons/image-_4_.ico",
               name: "بطاقة فيزا/ماستركارد",
               description: "ادفع باستخدام بطاقتك البنكية",
               bgColor: "bg-blue-500/10"
             },
             {
-              icon: "/public/icons/image-_3_.ico",
+              icon: "/icons/image-_3_.ico",
               name: "إنستا باي",
               description: "الدفع السريع عبر إنستا باي",
               bgColor: "bg-purple-500/10"
             },
             {
-              icon: "/public/icons/image-_2_.ico",
+              icon: "/icons/image-_2_.ico",
               name: "تحويل بنكي",
               description: "حول المبلغ مباشرة إلى حسابنا البنكي",
               bgColor: "bg-green-500/10"
