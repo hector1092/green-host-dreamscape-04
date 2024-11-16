@@ -7,9 +7,9 @@ const CircuitBackground = () => {
       <div 
         className="absolute inset-0 mx-auto"
         style={{ 
-          backgroundImage: 'url("/image/21.png")',
-          backgroundSize: 'contain',
-          backgroundPosition: 'center center',
+          backgroundImage: 'url("/image/website-hosting-concept-with-screen_23-2149406775.jpg")',
+          backgroundSize: '59%',
+          backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
           filter: 'brightness(1.5) contrast(1.1)',
         }}
