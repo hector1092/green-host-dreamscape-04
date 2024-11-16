@@ -42,7 +42,7 @@ const HostingPlans = () => {
     <section className="py-20">
       <div className="container mx-auto px-4">
         <h2 className="heading text-center mb-4">خطط الاستضافة</h2>
-        <p className="text-gray-400 text-center mb-16">اختر الخطة المناسبة لمشروعك</p>
+        <p className="text-gray-200 font-bold text-center mb-16">اختر الخطة المناسبة لمشروعك</p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {plans.map((plan, index) => (
             <div 
@@ -50,17 +50,17 @@ const HostingPlans = () => {
               className="card text-center transform hover:scale-105 hover:shadow-xl transition-all duration-300"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
-              <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
-              <p className="text-gray-400 text-sm mb-4">{plan.description}</p>
-              <div className="text-4xl font-bold text-primary mb-6">
+              <h3 className="text-2xl font-bold mb-4 text-primary">{plan.name}</h3>
+              <p className="text-gray-700 font-semibold text-lg mb-6">{plan.description}</p>
+              <div className="text-4xl font-bold text-primary mb-8">
                 {plan.price}
-                <span className="text-xl text-gray-400"> ج.م/شهرياً</span>
+                <span className="text-xl text-gray-600"> ج.م/شهرياً</span>
               </div>
-              <ul className="space-y-4 mb-8">
+              <ul className="space-y-6 mb-8">
                 {plan.features.map((feature, fIndex) => (
-                  <li key={fIndex} className="flex items-center gap-3 text-right">
-                    <feature.icon className="w-5 h-5 text-primary shrink-0" />
-                    <span>{feature.text}</span>
+                  <li key={fIndex} className="flex items-center gap-4 text-right">
+                    <feature.icon className="w-6 h-6 text-primary shrink-0" />
+                    <span className="text-gray-700 font-semibold">{feature.text}</span>
                   </li>
                 ))}
               </ul>
