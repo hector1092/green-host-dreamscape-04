@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Server, Mail, Code } from 'lucide-react';
 
 const services = [
@@ -20,6 +20,29 @@ const services = [
 ];
 
 const Services = () => {
+  const [activeIndex, setActiveIndex] = useState(-1);
+
+  useEffect(() => {
+    const animateCards = () => {
+      setActiveIndex(-1); // Reset animation
+      
+      // Start animation sequence
+      services.forEach((_, index) => {
+        setTimeout(() => {
+          setActiveIndex(index);
+        }, index * 500); // 500ms delay between each card
+      });
+    };
+
+    // Initial animation
+    animateCards();
+
+    // Set up interval for repeated animation
+    const interval = setInterval(animateCards, 7000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section>
       <div className="container mx-auto px-4">
@@ -28,7 +51,8 @@ const Services = () => {
           {services.map((service, index) => (
             <div 
               key={index}
-              className="bg-secondary/80 p-8 rounded-xl shadow-lg hover:transform hover:scale-105 transition-all duration-300 group"
+              className={`bg-secondary/80 p-8 rounded-xl shadow-lg transition-all duration-1000 ease-in-out transform
+                ${activeIndex >= index ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'}`}
             >
               <div className="flex flex-col items-center text-center gap-6">
                 <div className="p-4 bg-primary/10 rounded-full group-hover:bg-primary/20 transition-colors duration-300">
