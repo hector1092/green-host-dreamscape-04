@@ -3,7 +3,6 @@ import React from 'react';
 const CircuitBackground = () => {
   return (
     <div className="fixed inset-0 -z-10 overflow-hidden">
-      {/* الصورة الأساسية كخلفية */}
       <div 
         className="absolute inset-0 w-full h-full"
         style={{ 
@@ -15,6 +14,8 @@ const CircuitBackground = () => {
           height: '100%'
         }}
       />
+      {/* طبقة شفافة خفيفة للتباين */}
+      <div className="absolute inset-0 bg-black/20" />
     </div>
   );
 };

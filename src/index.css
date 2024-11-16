@@ -37,15 +37,19 @@
   }
 
   .card {
-    @apply bg-white rounded-xl p-8 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-xl;
+    @apply bg-white/5 backdrop-blur-sm rounded-xl p-8 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-xl border border-white/10;
   }
 
   .heading {
-    @apply text-5xl md:text-6xl font-bold text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)] animate-text-flow;
+    @apply text-5xl md:text-6xl font-bold text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)] animate-fade-in;
   }
 
   .subheading {
-    @apply text-xl font-bold text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.3)];
+    @apply text-xl font-bold text-white/90 drop-shadow-[0_1px_2px_rgba(0,0,0,0.3)] animate-fade-in;
+  }
+
+  .section {
+    @apply py-20 bg-black/20 backdrop-blur-sm animate-fade-in;
   }
 }
 
