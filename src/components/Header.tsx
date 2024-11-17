@@ -29,12 +29,6 @@ const Header = () => {
             opacity: '0.8'
           }}
         />
-        <div className="container mx-auto px-4 mt-32">
-          <div className="max-w-4xl mx-auto animate-fade-in bg-white p-8 rounded-xl">
-            <div className="space-y-6">
-            </div>
-          </div>
-        </div>
       </header>
     </>
   );
