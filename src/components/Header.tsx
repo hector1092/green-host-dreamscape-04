@@ -1,27 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import AboutUsDialog from './AboutUsDialog';
 
 const Header = () => {
-  const [scrollPosition, setScrollPosition] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollPosition(window.scrollY);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
   return (
     <>
-      <div 
-        className="fixed top-0 w-full flex justify-between items-center p-4 z-50 bg-transparent"
-        style={{
-          transform: `translateY(${scrollPosition * 0.5}px)`,
-          transition: 'transform 0.3s ease-out'
-        }}
-      >
+      <div className="fixed top-0 w-full flex justify-between items-center p-4 z-50 bg-transparent">
         <a 
           href="https://wa.me/201030435987" 
           target="_blank" 
@@ -43,9 +26,7 @@ const Header = () => {
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
-            opacity: '0.8',
-            transform: `translateY(${scrollPosition * 0.3}px)`,
-            transition: 'transform 0.3s ease-out'
+            opacity: '0.8'
           }}
         />
       </header>
