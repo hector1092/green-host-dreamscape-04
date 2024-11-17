@@ -17,23 +17,18 @@ const Header = () => {
       
       <header className="relative min-h-screen flex items-center justify-center text-center" dir="rtl">
         <div 
-          className="absolute inset-0 -z-10 animate-float"
+          className="absolute inset-0 -z-10"
           style={{
             backgroundImage: 'url("/image/404.svg")',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
-            opacity: '0.1'
+            opacity: '0.8'
           }}
         />
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto animate-fade-in">
-            <h1 className="flex flex-col md:flex-row justify-center gap-8 text-6xl md:text-8xl lg:text-9xl font-black mb-12">
-              <span className="text-blue-500 animate-float drop-shadow-lg">السرعة</span>
-              <span className="text-green-500 animate-float drop-shadow-lg" style={{ animationDelay: '0.2s' }}>الأمان</span>
-              <span className="text-purple-500 animate-float drop-shadow-lg" style={{ animationDelay: '0.4s' }}>الاستقرار</span>
-            </h1>
-            <div className="space-y-4">
+        <div className="container mx-auto px-4 mt-32">
+          <div className="max-w-4xl mx-auto animate-fade-in bg-white/80 backdrop-blur-md p-8 rounded-xl">
+            <div className="space-y-6">
               <h2 className="text-2xl md:text-3xl font-bold text-gray-800">أفضل خطط الاستضافة بأسعار تنافسية</h2>
               <p className="text-lg md:text-xl text-gray-600">ابدأ موقعك الآن بأقل الأسعار وأعلى جودة</p>
               <a 
