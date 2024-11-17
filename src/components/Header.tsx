@@ -1,5 +1,4 @@
 import React from 'react';
-import { Globe } from 'lucide-react';
 import AboutUsDialog from './AboutUsDialog';
 
 const Header = () => {
@@ -7,7 +6,6 @@ const Header = () => {
     <>
       <div className="fixed top-0 w-full flex justify-center items-center p-4 z-50 bg-white/80 backdrop-blur-sm">
         <div className="flex items-center gap-3">
-          <Globe className="w-10 h-10 text-primary animate-spin" style={{ animationDuration: '10s' }} />
           <span className="text-5xl font-extrabold bg-gradient-to-r from-primary via-blue-500 to-primary text-transparent bg-clip-text animate-text-flow">
             Green Host
           </span>
@@ -17,7 +15,17 @@ const Header = () => {
         </div>
       </div>
       
-      <header className="relative min-h-screen flex items-center justify-center text-center bg-gradient-to-b from-white via-accent to-white" dir="rtl">
+      <header className="relative min-h-screen flex items-center justify-center text-center" dir="rtl">
+        <div 
+          className="absolute inset-0 -z-10 animate-float"
+          style={{
+            backgroundImage: 'url("/image/404.svg")',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+            opacity: '0.1'
+          }}
+        />
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto animate-fade-in">
             <h1 className="flex flex-col md:flex-row justify-center gap-8 text-6xl md:text-8xl lg:text-9xl font-black mb-12">
