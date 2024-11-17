@@ -17,6 +17,10 @@ const Header = () => {
     <>
       <div 
         className="fixed top-0 w-full flex justify-between items-center p-4 z-50 bg-transparent"
+        style={{
+          transform: `translateY(${scrollPosition * 0.5}px)`,
+          transition: 'transform 0.3s ease-out'
+        }}
       >
         <a 
           href="https://wa.me/201030435987" 
@@ -39,10 +43,9 @@ const Header = () => {
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
-            opacity: '0.6',
-            transform: `translateY(${scrollPosition * 0.5}px)`,
-            transition: 'transform 0.3s ease-out',
-            marginTop: '2rem'
+            opacity: '0.8',
+            transform: `translateY(${scrollPosition * 0.3}px)`,
+            transition: 'transform 0.3s ease-out'
           }}
         />
       </header>
