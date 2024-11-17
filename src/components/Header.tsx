@@ -4,7 +4,7 @@ import AboutUsDialog from './AboutUsDialog';
 const Header = () => {
   return (
     <>
-      <div className="fixed top-0 w-full flex justify-between items-center p-4 z-50 bg-white/80 backdrop-blur-sm">
+      <div className="fixed top-0 w-full flex justify-between items-center p-4 z-50 bg-white">
         <a 
           href="https://wa.me/201030435987" 
           target="_blank" 
@@ -30,7 +30,7 @@ const Header = () => {
           }}
         />
         <div className="container mx-auto px-4 mt-32">
-          <div className="max-w-4xl mx-auto animate-fade-in bg-white/80 backdrop-blur-md p-8 rounded-xl">
+          <div className="max-w-4xl mx-auto animate-fade-in bg-white p-8 rounded-xl">
             <div className="space-y-6">
             </div>
           </div>
