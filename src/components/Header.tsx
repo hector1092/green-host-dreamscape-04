@@ -26,7 +26,7 @@ const Header = () => {
             backgroundSize: 'contain',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
-            imageRendering: 'optimizeQuality'
+            imageRendering: 'auto'
           }}
         />
       </header>
