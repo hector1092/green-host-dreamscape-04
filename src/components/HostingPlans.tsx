@@ -46,7 +46,6 @@ const plans = [
     name: "خطة الاستضافة الشاملة",
     price: "2999",
     description: "الحل الأمثل للمشاريع الكبيرة",
-    popular: true,
     features: [
       { text: "مساحة تخزينية غير محدودة", icon: HardDrive },
       { text: "نقل بيانات شهري غير محدود", icon: Network },
@@ -73,13 +72,8 @@ const HostingPlans = () => {
           {plans.map((plan, index) => (
             <div 
               key={index} 
-              className={`card bg-gradient-to-br from-gray-900 to-gray-800 ${plan.popular ? 'ring-2 ring-primary' : ''}`}
+              className="card bg-gradient-to-br from-gray-900 to-gray-800"
             >
-              {plan.popular && (
-                <span className="absolute -top-3 right-4 bg-primary text-white px-4 py-1 rounded-full text-sm">
-                  عرض محدود
-                </span>
-              )}
               <div className="text-center">
                 <h3 className="text-2xl font-bold text-primary mb-2">{plan.name}</h3>
                 <p className="text-gray-400 text-sm mb-6">{plan.description}</p>

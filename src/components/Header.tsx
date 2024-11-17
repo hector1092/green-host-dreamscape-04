@@ -20,13 +20,13 @@ const Header = () => {
       
       <header className="relative min-h-screen flex items-center justify-center text-center" dir="rtl">
         <div 
-          className="absolute inset-0 -z-10 w-[95%] mx-auto"
+          className="absolute inset-0 -z-10 w-[90%] mx-auto"
           style={{
             backgroundImage: 'url("/image/404.svg")',
-            backgroundSize: 'cover',
+            backgroundSize: 'contain',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
-            imageRendering: 'crisp-edges'
+            imageRendering: 'high-quality'
           }}
         />
       </header>
