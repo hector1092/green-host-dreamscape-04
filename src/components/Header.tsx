@@ -11,7 +11,7 @@ const Header = () => {
           rel="noopener noreferrer" 
           className="btn-primary text-xl px-8 py-4 inline-flex items-center gap-3 hover:scale-105 transition-transform"
         >
-          اشترك في أفضل خطط الاستضافة
+          احجز الان
         </a>
         <div>
           <AboutUsDialog />
