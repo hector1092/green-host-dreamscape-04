@@ -4,7 +4,7 @@ import AboutUsDialog from './AboutUsDialog';
 const Header = () => {
   return (
     <>
-      <div className="fixed top-0 w-full flex justify-between items-center p-4 z-50 bg-transparent">
+      <div className="fixed top-0 w-full flex justify-between items-center p-4 z-50 bg-white/80 backdrop-blur-sm">
         <a 
           href="https://wa.me/201030435987" 
           target="_blank" 
@@ -20,13 +20,13 @@ const Header = () => {
       
       <header className="relative min-h-screen flex items-center justify-center text-center" dir="rtl">
         <div 
-          className="absolute inset-0 -z-10"
+          className="absolute inset-0 -z-10 w-[95%] mx-auto"
           style={{
             backgroundImage: 'url("/image/404.svg")',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
-            opacity: '0.8'
+            imageRendering: 'high-quality'
           }}
         />
       </header>
