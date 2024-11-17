@@ -4,7 +4,7 @@ import AboutUsDialog from './AboutUsDialog';
 const Header = () => {
   return (
     <>
-      <div className="fixed top-0 w-full flex justify-between items-center p-4 z-50 bg-transparent backdrop-blur-sm">
+      <div className="fixed top-0 w-full flex justify-between items-center p-4 z-50 bg-transparent">
         <a 
           href="https://wa.me/201030435987" 
           target="_blank" 
