@@ -32,7 +32,7 @@
   }
 
   .card {
-    @apply bg-accent rounded-xl p-4 md:p-8 transition-all duration-500 
+    @apply bg-accent/80 backdrop-blur-sm rounded-xl p-4 md:p-8 transition-all duration-500 
            hover:transform hover:scale-[1.02] hover:shadow-xl border border-primary/10 
            shadow-lg;
   }
@@ -40,16 +40,16 @@
   .heading {
     @apply text-4xl md:text-6xl lg:text-7xl font-bold text-primary mb-6
            bg-gradient-to-r from-primary via-primary-light to-primary bg-clip-text text-transparent
-           drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)] animate-text-flow;
+           drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)];
   }
 
   .subheading {
-    @apply text-xl md:text-2xl font-bold text-primary-light mb-8
+    @apply text-xl md:text-2xl font-medium text-primary-light mb-8
            drop-shadow-[0_1px_2px_rgba(0,0,0,0.2)] animate-fade-in;
   }
 
   .section {
-    @apply py-12 md:py-24 bg-secondary animate-fade-in 
+    @apply py-12 md:py-24 bg-secondary/95 animate-fade-in 
            border-y border-primary/10 shadow-sm;
   }
 
@@ -59,7 +59,7 @@
 }
 
 .text-glow {
-  text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+  text-shadow: 0 0 20px rgba(249, 219, 57, 0.5);
 }
 
 .glass-effect {
