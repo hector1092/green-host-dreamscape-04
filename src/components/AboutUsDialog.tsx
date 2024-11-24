@@ -11,14 +11,14 @@ const AboutUsDialog = () => {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <button className="flex items-center gap-2 bg-gradient-to-r from-primary via-blue-500 to-primary text-white px-6 py-3 rounded-full font-bold text-lg hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-primary/30">
+        <button className="flex items-center gap-2 bg-gradient-to-r from-primary via-primary-light to-primary text-secondary px-6 py-3 rounded-full font-bold text-lg hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-primary/30">
           <Info className="w-5 h-5" />
           من نحن
         </button>
       </DialogTrigger>
-      <DialogContent className="max-w-3xl max-h-[80vh] overflow-y-auto glass-effect" dir="rtl">
+      <DialogContent className="max-w-3xl max-h-[80vh] overflow-y-auto bg-secondary border border-primary/20" dir="rtl">
         <DialogHeader>
-          <DialogTitle className="text-3xl font-bold bg-gradient-to-r from-primary via-blue-500 to-primary text-transparent bg-clip-text mb-8">
+          <DialogTitle className="text-3xl font-bold bg-gradient-to-r from-primary via-primary-light to-primary text-transparent bg-clip-text mb-8">
             مرحبا بك في Green Host – حيث يلتقي الأداء بالأمان.
           </DialogTitle>
         </DialogHeader>

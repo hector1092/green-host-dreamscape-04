@@ -30,14 +30,14 @@ const PaymentMethods = () => {
   ];
 
   return (
-    <section className="py-16 bg-secondary/80 backdrop-blur-sm">
+    <section className="py-16 bg-secondary border-y border-primary/10">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold text-center mb-12 text-primary">طرق الدفع</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {paymentMethods.map((method, index) => (
             <div
               key={index}
-              className={`${method.bgColor} backdrop-blur-xl rounded-xl p-6 text-center hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl border border-white/10 flex flex-col items-center`}
+              className="bg-accent/80 backdrop-blur-xl rounded-xl p-6 text-center hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl border border-primary/10 flex flex-col items-center"
             >
               <div className="mb-4">
                 <img 
@@ -46,8 +46,8 @@ const PaymentMethods = () => {
                   className="w-16 h-16 transition-transform duration-300 hover:scale-110"
                 />
               </div>
-              <h3 className="text-xl font-bold mb-2 text-white">{method.name}</h3>
-              <p className="text-gray-300">{method.description}</p>
+              <h3 className="text-xl font-bold mb-2 text-primary">{method.name}</h3>
+              <p className="text-primary-light/80">{method.description}</p>
             </div>
           ))}
         </div>
