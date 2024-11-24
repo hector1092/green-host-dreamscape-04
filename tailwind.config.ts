@@ -23,19 +23,19 @@ export default {
     extend: {
       colors: {
         primary: {
-          DEFAULT: "#FFD700", // Gold
-          dark: "#DAA520", // Darker gold
-          light: "#FFE55C", // Lighter gold
+          DEFAULT: "#f9db39", // اللون الذهبي الجديد
+          dark: "#e5c834", // نسخة داكنة
+          light: "#fae05c", // نسخة فاتحة
         },
         secondary: {
-          DEFAULT: "#1A1A1A", // Very dark gray
-          dark: "#000000", // Black
-          light: "#2D2D2D", // Slightly lighter dark
+          DEFAULT: "#1A1A1A",
+          dark: "#000000",
+          light: "#2D2D2D",
         },
         accent: {
-          DEFAULT: "#2A2A2A", // Dark gray
-          dark: "#000000", // Black
-          light: "#3D3D3D", // Lighter dark gray
+          DEFAULT: "#2A2A2A",
+          dark: "#000000",
+          light: "#3D3D3D",
         },
       },
       fontFamily: {
