@@ -18,7 +18,7 @@ const Header = () => {
         </div>
       </div>
       
-      <header className="relative min-h-screen flex items-center justify-center text-center px-4 md:px-0" dir="rtl">
+      <header className="min-h-screen flex items-center justify-center text-center px-4 md:px-0" dir="rtl">
         <div 
           className="absolute inset-0 -z-10 w-full md:w-[90%] mx-auto animate-float"
           style={{
