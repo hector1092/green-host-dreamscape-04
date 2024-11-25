@@ -11,7 +11,7 @@ const plans = [
       { text: "مساحة 3 جيجا بايت", icon: HardDrive },
       { text: "باندويدث 30,000 جيجا بايت شهرياً", icon: Network },
       { text: "5 إيميلات رسمية", icon: Mail },
-      { text: "ربط الدومين مع الاستضافة", icon: Globe },
+      { text: "دومين بسعر خاص", icon: Globe },
       { text: "تركيب ووردبريس", icon: Database },
       { text: "نسخ احتياطي يومي", icon: Clock },
     ]
@@ -24,7 +24,7 @@ const plans = [
       { text: "مساحة 6 جيجا بايت", icon: HardDrive },
       { text: "باندويدث 60,000 جيجا بايت شهرياً", icon: Network },
       { text: "10 إيميلات رسمية", icon: Mail },
-      { text: "ربط الدومين مع الاستضافة", icon: Globe },
+      { text: "دومين بسعر خاص", icon: Globe },
       { text: "تركيب ووردبريس", icon: Database },
       { text: "نسخ احتياطي يومي", icon: Clock },
     ]
@@ -37,7 +37,7 @@ const plans = [
       { text: "مساحة 15 جيجا بايت", icon: HardDrive },
       { text: "باندويدث 150,000 جيجا بايت شهرياً", icon: Network },
       { text: "20 إيميل رسمي", icon: Mail },
-      { text: "ربط الدومين مع الاستضافة", icon: Globe },
+      { text: "دومين بسعر خاص", icon: Globe },
       { text: "تركيب ووردبريس", icon: Database },
       { text: "دعم فني متقدم 24/7", icon: Clock },
     ]
@@ -50,7 +50,7 @@ const plans = [
       { text: "مساحة تخزينية غير محدودة", icon: HardDrive },
       { text: "نقل بيانات شهري غير محدود", icon: Network },
       { text: "عدد غير محدود من الإيميلات الرسمية", icon: Mail },
-      { text: "ربط مجاني للدومين مع الاستضافة", icon: Globe },
+      { text: "دومين مجاني", icon: Globe },
       { text: "تركيب وتجهيز ووردبريس", icon: Database },
       { text: "حماية متقدمة من الفيروسات والهجمات", icon: Shield },
       { text: "دعم فني متميز على مدار الساعة", icon: Clock },
