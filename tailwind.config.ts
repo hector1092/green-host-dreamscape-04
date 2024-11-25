@@ -23,19 +23,19 @@ export default {
     extend: {
       colors: {
         primary: {
-          DEFAULT: "#f9db39", // اللون الذهبي الجديد
-          dark: "#e5c834", // نسخة داكنة
-          light: "#fae05c", // نسخة فاتحة
+          DEFAULT: "#3B82F6",
+          dark: "#2563EB",
+          light: "#60A5FA",
         },
         secondary: {
-          DEFAULT: "#1A1A1A",
-          dark: "#000000",
-          light: "#2D2D2D",
+          DEFAULT: "#FFFFFF",
+          dark: "#F3F4F6",
+          light: "#FFFFFF",
         },
         accent: {
-          DEFAULT: "#2A2A2A",
-          dark: "#000000",
-          light: "#3D3D3D",
+          DEFAULT: "#F8FAFC",
+          dark: "#F1F5F9",
+          light: "#FFFFFF",
         },
       },
       fontFamily: {
@@ -70,10 +70,6 @@ export default {
           "0%, 100%": { transform: "translateY(0)" },
           "50%": { transform: "translateY(-10px)" },
         },
-        "pulse-glow": {
-          "0%, 100%": { boxShadow: "0 0 20px rgba(16, 185, 129, 0.5)" },
-          "50%": { boxShadow: "0 0 40px rgba(16, 185, 129, 0.8)" },
-        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -83,11 +79,6 @@ export default {
         "number-count": "number-count 1s ease-out forwards",
         "text-flow": "text-flow 3s linear infinite",
         "float": "float 3s ease-in-out infinite",
-        "pulse-glow": "pulse-glow 2s ease-in-out infinite",
-      },
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
     },
   },
