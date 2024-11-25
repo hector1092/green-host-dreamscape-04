@@ -64,7 +64,7 @@ const HostingPlans = () => {
   };
 
   return (
-    <section dir="rtl">
+    <section dir="rtl" className="py-16">
       <div className="container mx-auto px-4">
         <h2 className="heading text-center mb-4">خطط الاستضافة</h2>
         <p className="subheading text-center mb-16">اختر الخطة المناسبة لمشروعك</p>
@@ -72,26 +72,26 @@ const HostingPlans = () => {
           {plans.map((plan, index) => (
             <div 
               key={index} 
-              className="card bg-gradient-to-br from-gray-900 to-gray-800"
+              className="bg-white rounded-xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
             >
               <div className="text-center">
-                <h3 className="text-2xl font-bold text-primary mb-2">{plan.name}</h3>
-                <p className="text-gray-400 text-sm mb-6">{plan.description}</p>
-                <div className="text-4xl font-bold text-white mb-8 bg-gradient-to-r from-primary via-blue-500 to-primary bg-clip-text">
+                <h3 className="text-2xl font-bold text-blue-600 mb-2">{plan.name}</h3>
+                <p className="text-gray-600 text-sm mb-6">{plan.description}</p>
+                <div className="text-4xl font-bold text-gray-800 mb-8">
                   {plan.price}
-                  <span className="text-xl text-gray-400"> ج.م/شهرياً</span>
+                  <span className="text-xl text-gray-500"> ج.م</span>
                 </div>
                 <ul className="space-y-4 mb-8 text-right">
                   {plan.features.map((feature, fIndex) => (
                     <li key={fIndex} className="flex items-center gap-3">
-                      <feature.icon className="w-5 h-5 text-primary shrink-0" />
-                      <span className="text-gray-300 text-sm">{feature.text}</span>
+                      <feature.icon className="w-5 h-5 text-blue-500 shrink-0" />
+                      <span className="text-gray-600 text-sm">{feature.text}</span>
                     </li>
                   ))}
                 </ul>
                 <Button 
                   onClick={handleSubscribe}
-                  className="w-full bg-primary hover:bg-primary-dark text-white font-bold transition-all duration-300 shadow-lg shadow-primary/20 hover:shadow-primary/40"
+                  className="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold transition-all duration-300 shadow-lg hover:shadow-xl"
                   size="lg"
                 >
                   اشترك الآن
