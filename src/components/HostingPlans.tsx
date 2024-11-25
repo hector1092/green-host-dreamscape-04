@@ -31,7 +31,7 @@ const plans = [
   },
   {
     name: "خطة الأعمال المتقدمة",
-    price: "2500",
+    price: "3000",
     description: "مثالية للشركات والمؤسسات الكبيرة",
     features: [
       { text: "مساحة 15 جيجا بايت", icon: HardDrive },
@@ -44,7 +44,7 @@ const plans = [
   },
   {
     name: "خطة الاستضافة الشاملة",
-    price: "2999",
+    price: "5000",
     description: "الحل الأمثل للمشاريع الكبيرة",
     features: [
       { text: "مساحة تخزينية غير محدودة", icon: HardDrive },
