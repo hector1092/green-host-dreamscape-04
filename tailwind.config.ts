@@ -23,8 +23,8 @@ export default {
     extend: {
       colors: {
         primary: {
-          DEFAULT: "#3B82F6",
-          dark: "#2563EB",
+          DEFAULT: "#2563EB", // تم تغيير اللون الأساسي ليكون أغمق
+          dark: "#1D4ED8",
           light: "#60A5FA",
         },
         secondary: {
@@ -37,6 +37,11 @@ export default {
           dark: "#F1F5F9",
           light: "#FFFFFF",
         },
+        text: {
+          DEFAULT: "#1F2937", // لون النص الأساسي
+          light: "#4B5563", // لون النص الفاتح
+          dark: "#111827", // لون النص الداكن
+        }
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
