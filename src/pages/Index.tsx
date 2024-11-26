@@ -14,7 +14,7 @@ const Index = () => {
         loop
         muted
         playsInline
-        className="fixed top-0 left-0 min-w-full min-h-full object-cover -z-10 scale-110 transform transition-transform duration-[20s]"
+        className="fixed top-0 left-0 min-w-full min-h-full object-cover -z-10 scale-[0.85] transform transition-transform duration-[20s]"
       >
         <source src="/vedio/green hosting.mp4" type="video/mp4" />
         Your browser does not support the video tag.
