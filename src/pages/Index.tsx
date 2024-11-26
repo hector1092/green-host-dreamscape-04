@@ -7,7 +7,7 @@ import PaymentMethods from '../components/PaymentMethods';
 
 const Index = () => {
   return (
-    <div className="min-h-screen relative text-right overflow-hidden" dir="rtl">
+    <div className="min-h-screen relative text-right overflow-hidden bg-white" dir="rtl">
       <video
         id="video-background"
         autoPlay
@@ -21,9 +21,7 @@ const Index = () => {
       </video>
       <div className="relative z-10">
         <CircuitBackground />
-        <div className="sticky top-0 w-full z-50 bg-white/90 shadow-lg">
-          <Header />
-        </div>
+        <Header />
         <HostingPlans />
         <PaymentMethods />
         <Footer />
