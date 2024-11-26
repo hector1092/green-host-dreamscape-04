@@ -19,7 +19,7 @@ const Index = () => {
         <source src="/green (1) (1).mkv" type="video/x-matroska" />
         Your browser does not support the video tag.
       </video>
-      <div className="relative z-10">
+      <div className="relative z-10 bg-white/5 backdrop-blur-sm">
         <CircuitBackground />
         <Header />
         <HostingPlans />
