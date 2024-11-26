@@ -16,10 +16,10 @@ const Index = () => {
         playsInline
         className="fixed top-0 left-0 min-w-full min-h-full object-cover -z-10 animate-pulse"
       >
-        <source src="/green (1) (1).mkv" type="video/x-matroska" />
+        <source src="/vedio/green hosting.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
-      <div className="relative z-10 bg-white/5 backdrop-blur-sm">
+      <div className="relative z-10 bg-gradient-to-b from-black/30 via-transparent to-black/30">
         <CircuitBackground />
         <Header />
         <HostingPlans />
