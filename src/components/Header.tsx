@@ -15,7 +15,7 @@ const Header = () => {
 
   return (
     <>
-      <div className={`fixed top-0 left-0 right-0 flex justify-between items-center p-4 z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-lg' : 'bg-transparent'}`}>
+      <div className={`fixed top-0 left-0 right-0 flex justify-between items-center p-4 z-50 transition-all duration-300 ${isScrolled ? 'bg-primary text-white shadow-lg' : ''}`}>
         <a 
           href="https://wa.me/201030435987" 
           target="_blank" 
@@ -29,7 +29,7 @@ const Header = () => {
         </div>
       </div>
       
-      <header className="min-h-screen flex items-center justify-center text-center px-4 md:px-0 bg-white" dir="rtl">
+      <header className="min-h-screen flex items-center justify-center text-center px-4 md:px-0" dir="rtl">
         <div 
           className="w-full md:w-[90%] mx-auto"
           style={{

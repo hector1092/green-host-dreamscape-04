@@ -7,7 +7,7 @@ import PaymentMethods from '../components/PaymentMethods';
 
 const Index = () => {
   return (
-    <div className="min-h-screen relative text-right overflow-hidden bg-white" dir="rtl">
+    <div className="min-h-screen relative text-right overflow-hidden" dir="rtl">
       <video
         id="video-background"
         autoPlay
