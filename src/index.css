@@ -24,31 +24,31 @@
     height: auto;
     z-index: -1;
     object-fit: cover;
-    filter: brightness(0.85) contrast(1.1);
-    animation: zoom-pan 30s ease-in-out infinite alternate;
+    filter: brightness(1.2) contrast(1.1);
+    animation: zoom-pan 20s ease-in-out infinite alternate;
   }
 }
 
 @keyframes zoom-pan {
   0% {
-    transform: scale(1.05) translate(0, 0);
+    transform: scale(1.1) translate(0, 0);
   }
   50% {
-    transform: scale(1.1) translate(-1%, -1%);
+    transform: scale(1.2) translate(-2%, -2%);
   }
   100% {
-    transform: scale(1.05) translate(1%, 1%);
+    transform: scale(1.1) translate(2%, 2%);
   }
 }
 
 @layer components {
   .btn {
     @apply px-4 py-2 md:px-8 md:py-4 rounded-lg font-bold transition-all duration-500 transform hover:scale-105 
-           active:scale-95 focus:outline-none focus:ring-2 focus:ring-primary/50 backdrop-blur-sm animate-fade-in;
+           active:scale-95 focus:outline-none focus:ring-2 focus:ring-primary/50;
   }
 
   .btn-primary {
-    @apply btn bg-primary/80 hover:bg-primary text-white shadow-xl hover:shadow-primary/20;
+    @apply btn bg-primary hover:bg-primary-dark text-white shadow-xl;
   }
 
   .btn-outline {
@@ -56,25 +56,24 @@
   }
 
   .card {
-    @apply bg-white/10 backdrop-blur-md rounded-xl p-4 md:p-8 transition-all duration-500 
-           hover:transform hover:scale-[1.02] hover:shadow-2xl border border-white/20 
-           shadow-xl hover:bg-white/20 animate-float;
+    @apply bg-white rounded-xl p-4 md:p-8 transition-all duration-500 
+           hover:transform hover:scale-[1.02] hover:shadow-2xl border border-primary/20 
+           shadow-xl hover:bg-primary/5;
   }
 
   .heading {
     @apply text-4xl md:text-6xl lg:text-7xl font-bold mb-6
            bg-gradient-to-r from-primary via-primary-light to-primary-dark bg-clip-text text-transparent
-           drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)] animate-text-flow;
+           drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)] animate-bounce;
   }
 
   .subheading {
-    @apply text-xl md:text-2xl font-medium text-white mb-8
-           drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)] animate-fade-in;
+    @apply text-2xl md:text-3xl font-bold text-primary mb-8
+           drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)];
   }
 
   .section {
-    @apply py-12 md:py-24 bg-white/5 backdrop-blur-lg animate-fade-in 
-           border-y border-white/20 shadow-lg;
+    @apply py-12 md:py-24 bg-white shadow-lg;
   }
 
   .container {
@@ -83,36 +82,31 @@
 }
 
 .text-glow {
-  text-shadow: 0 0 30px rgba(37, 99, 235, 0.8);
+  text-shadow: 0 0 30px rgba(37, 99, 235, 1);
   animation: glow 3s ease-in-out infinite alternate;
 }
 
 @keyframes glow {
   from {
-    text-shadow: 0 0 20px rgba(37, 99, 235, 0.8);
+    text-shadow: 0 0 20px rgba(37, 99, 235, 1);
   }
   to {
-    text-shadow: 0 0 30px rgba(37, 99, 235, 1), 0 0 40px rgba(37, 99, 235, 0.5);
+    text-shadow: 0 0 40px rgba(37, 99, 235, 1);
   }
-}
-
-.glass-effect {
-  @apply bg-white/10 backdrop-blur-xl border border-white/20 rounded-xl hover:bg-white/20 transition-all duration-300
-         hover:scale-105 hover:shadow-lg;
 }
 
 .hover-lift {
-  @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl;
+  @apply transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl;
 }
 
 .text-on-white {
-  @apply text-text-dark font-semibold drop-shadow-lg;
+  @apply text-primary font-bold drop-shadow-lg;
 }
 
 .text-on-transparent {
-  @apply text-white font-bold drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)];
+  @apply text-primary font-extrabold drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)];
 }
 
 .text-on-accent {
-  @apply text-text-dark font-semibold drop-shadow-md;
+  @apply text-primary font-bold drop-shadow-md;
 }
