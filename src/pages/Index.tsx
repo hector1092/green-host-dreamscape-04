@@ -18,7 +18,7 @@ const Index = () => {
         poster="/image/404.svg"
         className="fixed top-0 left-0 min-w-full min-h-full object-cover -z-10"
       >
-        <source src="/vedio/green hosting.mp4" type="video/mp4" />
+        <source src="vedio/green hosting.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       <div className="relative z-10">

@@ -25,6 +25,8 @@
     z-index: -1;
     object-fit: cover;
     filter: brightness(1.4) contrast(1.1);
+    opacity: 1;
+    will-change: transform;
   }
 
   @media (max-width: 768px) {
