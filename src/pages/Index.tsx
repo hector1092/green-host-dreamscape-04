@@ -19,7 +19,7 @@ const Index = () => {
         <source src="/vedio/green hosting.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
-      <div className="relative z-10 bg-black/20">
+      <div className="relative z-10">
         <CircuitBackground />
         <Header />
         <HostingPlans />
