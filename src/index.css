@@ -25,13 +25,26 @@
     z-index: -1;
     object-fit: cover;
     filter: brightness(0.85) contrast(1.1);
+    animation: zoom-pan 30s ease-in-out infinite alternate;
+  }
+}
+
+@keyframes zoom-pan {
+  0% {
+    transform: scale(1.05) translate(0, 0);
+  }
+  50% {
+    transform: scale(1.1) translate(-1%, -1%);
+  }
+  100% {
+    transform: scale(1.05) translate(1%, 1%);
   }
 }
 
 @layer components {
   .btn {
     @apply px-4 py-2 md:px-8 md:py-4 rounded-lg font-bold transition-all duration-500 transform hover:scale-105 
-           active:scale-95 focus:outline-none focus:ring-2 focus:ring-primary/50 backdrop-blur-sm;
+           active:scale-95 focus:outline-none focus:ring-2 focus:ring-primary/50 backdrop-blur-sm animate-fade-in;
   }
 
   .btn-primary {
@@ -45,7 +58,7 @@
   .card {
     @apply bg-white/10 backdrop-blur-md rounded-xl p-4 md:p-8 transition-all duration-500 
            hover:transform hover:scale-[1.02] hover:shadow-2xl border border-white/20 
-           shadow-xl hover:bg-white/20;
+           shadow-xl hover:bg-white/20 animate-float;
   }
 
   .heading {
@@ -71,10 +84,21 @@
 
 .text-glow {
   text-shadow: 0 0 30px rgba(37, 99, 235, 0.8);
+  animation: glow 3s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 20px rgba(37, 99, 235, 0.8);
+  }
+  to {
+    text-shadow: 0 0 30px rgba(37, 99, 235, 1), 0 0 40px rgba(37, 99, 235, 0.5);
+  }
 }
 
 .glass-effect {
-  @apply bg-white/10 backdrop-blur-xl border border-white/20 rounded-xl hover:bg-white/20 transition-colors duration-300;
+  @apply bg-white/10 backdrop-blur-xl border border-white/20 rounded-xl hover:bg-white/20 transition-all duration-300
+         hover:scale-105 hover:shadow-lg;
 }
 
 .hover-lift {

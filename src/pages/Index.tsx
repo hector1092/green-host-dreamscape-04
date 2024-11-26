@@ -14,12 +14,12 @@ const Index = () => {
         loop
         muted
         playsInline
-        className="fixed top-0 left-0 min-w-full min-h-full object-cover -z-10 animate-pulse"
+        className="fixed top-0 left-0 min-w-full min-h-full object-cover -z-10 animate-pulse-slow scale-105 transform transition-transform duration-[30s]"
       >
         <source src="/vedio/green hosting.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
-      <div className="relative z-10 bg-gradient-to-b from-black/30 via-transparent to-black/30">
+      <div className="relative z-10 bg-gradient-to-b from-black/30 via-transparent to-black/30 animate-fade-in">
         <CircuitBackground />
         <Header />
         <HostingPlans />
