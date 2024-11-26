@@ -24,43 +24,44 @@
     height: auto;
     z-index: -1;
     object-fit: cover;
+    filter: brightness(0.9) contrast(1.1);
   }
 }
 
 @layer components {
   .btn {
     @apply px-4 py-2 md:px-8 md:py-4 rounded-lg font-bold transition-all duration-500 transform hover:scale-105 
-           active:scale-95 focus:outline-none focus:ring-2 focus:ring-primary/50;
+           active:scale-95 focus:outline-none focus:ring-2 focus:ring-primary/50 backdrop-blur-sm;
   }
 
   .btn-primary {
-    @apply btn bg-primary hover:bg-primary-dark text-white shadow-lg;
+    @apply btn bg-primary hover:bg-primary-dark text-white shadow-xl;
   }
 
   .btn-outline {
-    @apply btn border-2 border-primary text-primary hover:bg-primary hover:text-white shadow-lg;
+    @apply btn border-2 border-primary text-primary hover:bg-primary hover:text-white shadow-xl;
   }
 
   .card {
-    @apply bg-white rounded-xl p-4 md:p-8 transition-all duration-500 
-           hover:transform hover:scale-[1.02] hover:shadow-xl border border-gray-200 
-           shadow-lg;
+    @apply bg-white/90 backdrop-blur-md rounded-xl p-4 md:p-8 transition-all duration-500 
+           hover:transform hover:scale-[1.02] hover:shadow-2xl border border-white/20 
+           shadow-xl;
   }
 
   .heading {
     @apply text-4xl md:text-6xl lg:text-7xl font-bold mb-6
-           bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent
-           drop-shadow-[0_2px_4px_rgba(0,0,0,0.1)];
+           bg-gradient-to-r from-primary via-primary-light to-primary-dark bg-clip-text text-transparent
+           drop-shadow-[0_2px_8px_rgba(0,0,0,0.2)] animate-text-flow;
   }
 
   .subheading {
-    @apply text-xl md:text-2xl font-medium text-text-dark mb-8
-           drop-shadow-[0_1px_2px_rgba(0,0,0,0.1)] animate-fade-in;
+    @apply text-xl md:text-2xl font-medium text-white mb-8
+           drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)] animate-fade-in;
   }
 
   .section {
-    @apply py-12 md:py-24 bg-white/95 animate-fade-in 
-           border-y border-gray-200 shadow-sm;
+    @apply py-12 md:py-24 bg-white/80 backdrop-blur-lg animate-fade-in 
+           border-y border-white/20 shadow-lg;
   }
 
   .container {
@@ -69,35 +70,25 @@
 }
 
 .text-glow {
-  text-shadow: 0 0 20px rgba(37, 99, 235, 0.5);
+  text-shadow: 0 0 30px rgba(37, 99, 235, 0.7);
 }
 
 .glass-effect {
-  @apply bg-white/95 border border-gray-200 rounded-xl;
+  @apply bg-white/90 backdrop-blur-xl border border-white/20 rounded-xl;
 }
 
 .hover-lift {
-  @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-lg;
+  @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl;
 }
 
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-}
-
-.animate-float {
-  animation: float 3s ease-in-out infinite;
-}
-
-/* تحسين تباين النصوص على الخلفيات المختلفة */
 .text-on-white {
-  @apply text-text-dark;
+  @apply text-text-dark font-semibold;
 }
 
 .text-on-transparent {
-  @apply text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.3)];
+  @apply text-white font-bold drop-shadow-[0_2px_4px_rgba(0,0,0,0.4)];
 }
 
 .text-on-accent {
-  @apply text-text-dark font-medium;
+  @apply text-text-dark font-semibold;
 }

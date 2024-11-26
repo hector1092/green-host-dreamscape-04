@@ -23,7 +23,7 @@ export default {
     extend: {
       colors: {
         primary: {
-          DEFAULT: "#2563EB", // تم تغيير اللون الأساسي ليكون أغمق
+          DEFAULT: "#2563EB",
           dark: "#1D4ED8",
           light: "#60A5FA",
         },
@@ -38,9 +38,9 @@ export default {
           light: "#FFFFFF",
         },
         text: {
-          DEFAULT: "#1F2937", // لون النص الأساسي
-          light: "#4B5563", // لون النص الفاتح
-          dark: "#111827", // لون النص الداكن
+          DEFAULT: "#1F2937",
+          light: "#4B5563",
+          dark: "#111827",
         }
       },
       fontFamily: {
