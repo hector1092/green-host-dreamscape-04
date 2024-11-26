@@ -23,24 +23,24 @@ export default {
     extend: {
       colors: {
         primary: {
-          DEFAULT: "#2563EB",
-          dark: "#1D4ED8",
-          light: "#60A5FA",
+          DEFAULT: "#1A56DB", // أزرق داكن أكثر
+          dark: "#1E429F",    // أزرق داكن جداً
+          light: "#3B82F6",   // أزرق فاتح
         },
         secondary: {
           DEFAULT: "#FFFFFF",
-          dark: "#F3F4F6",
+          dark: "#E5E7EB",
           light: "#FFFFFF",
         },
         accent: {
-          DEFAULT: "#F8FAFC",
-          dark: "#F1F5F9",
+          DEFAULT: "#F3F4F6",
+          dark: "#E5E7EB",
           light: "#FFFFFF",
         },
         text: {
-          DEFAULT: "#1F2937",
-          light: "#4B5563",
-          dark: "#111827",
+          DEFAULT: "#111827", // أسود داكن جداً
+          light: "#374151",   // رمادي داكن
+          dark: "#000000",    // أسود خالص
         }
       },
       fontFamily: {
